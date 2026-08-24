@@ -23,6 +23,79 @@
   function storeLang(lang) {
     try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
   }
+  /* ---------- Multilingual SVG & Graphic Illustrations (UZ / RU / EN) ---------- */
+  var SVG_I18N = {
+    "savdo markazi · parking": { uz: "savdo markazi · parking", ru: "торговый центр · паркинг", en: "shopping mall · parking" },
+    "ishlab chiqarish · cctv": { uz: "ishlab chiqarish · cctv", ru: "производство · видеонаблюдение", en: "manufacturing · cctv" },
+    "biznes-markaz · acs": { uz: "biznes-markaz · acs", ru: "бизнес-центр · скуд", en: "business centre · acs" },
+    "turar-joy · domofon": { uz: "turar-joy · domofon", ru: "жилой комплекс · домофония", en: "residential · intercom" },
+    "logistika · integratsiya": { uz: "logistika · integratsiya", ru: "логистика · интеграция", en: "logistics · integration" },
+    "tibbiyot · monitoring": { uz: "tibbiyot · monitoring", ru: "медицина · мониторинг", en: "healthcare · monitoring" },
+    "// parking · real vaqtda": { uz: "// parking · real vaqtda", ru: "// паркинг · реальное время", en: "// parking · real-time" },
+    "BO'SH JOYLAR": { uz: "BO'SH JOYLAR", ru: "СВОБОДНО МЕСТ", en: "FREE SPACES" },
+    "ruxsat berildi · abonement": { uz: "ruxsat berildi · abonement", ru: "доступ разрешён · абонемент", en: "access granted · season pass" },
+    "// videokuzatuv · 24/7": { uz: "// videokuzatuv · 24/7", ru: "// видеонаблюдение · 24/7", en: "// video surveillance · 24/7" },
+    "OBYEKT": { uz: "OBYEKT", ru: "ОБЪЕКТ", en: "OBJECT" },
+    "Kameralar": { uz: "Kameralar", ru: "Камеры", en: "Cameras" },
+    "Arxiv": { uz: "Arxiv", ru: "Архив", en: "Archive" },
+    "30 kun": { uz: "30 kun", ru: "30 дней", en: "30 days" },
+    "Kirish nazorati": { uz: "Kirish nazorati", ru: "Контроль доступа", en: "Access control" },
+    "faol": { uz: "faol", ru: "активно", en: "active" },
+    "Signalizatsiya": { uz: "Signalizatsiya", ru: "Сигнализация", en: "Alarm system" },
+    "qurollangan": { uz: "qurollangan", ru: "на охране", en: "armed" },
+    "// jarayon avtomatlashtirish": { uz: "// jarayon avtomatlashtirish", ru: "// автоматизация процессов", en: "// process automation" },
+    "Sensor": { uz: "Sensor", ru: "Датчик", en: "Sensor" },
+    "Kontroller": { uz: "Kontroller", ru: "Контроллер", en: "Controller" },
+    "Harakat": { uz: "Harakat", ru: "Действие", en: "Action" },
+    "Hisobot": { uz: "Hisobot", ru: "Отчёт", en: "Report" },
+    "avtomatik ishga tushish": { uz: "avtomatik ishga tushish", ru: "автоматический запуск", en: "automated trigger" },
+    "// tizimlarni birlashtirish": { uz: "// tizimlarni birlashtirish", ru: "// интеграция систем", en: "// system integration" },
+    "To'lov": { uz: "To'lov", ru: "Оплата", en: "Payments" },
+    "Kamera": { uz: "Kamera", ru: "Камеры", en: "Cameras" },
+    "Shlagbaum": { uz: "Shlagbaum", ru: "Шлагбаум", en: "Barrier" },
+    "Telegram": { uz: "Telegram", ru: "Telegram", en: "Telegram" },
+    "yagona markaz": { uz: "yagona markaz", ru: "единый центр", en: "unified hub" }
+  };
+
+  function updateSvgTexts(lang) {
+    document.querySelectorAll("svg text, svg tspan").forEach(function (textEl) {
+      var raw = textEl.getAttribute("data-svg-raw");
+      if (!raw) {
+        raw = textEl.textContent.trim();
+        textEl.setAttribute("data-svg-raw", raw);
+      }
+      if (SVG_I18N[raw] && SVG_I18N[raw][lang]) {
+        textEl.textContent = SVG_I18N[raw][lang];
+      }
+    });
+  }
+
+  function inlineAndTranslateSvgs() {
+    var images = document.querySelectorAll(".dir-media img[src$='.svg'], .service-visual img[src$='.svg'], .case-cover img[src$='.svg']");
+    images.forEach(function (img) {
+      var src = img.getAttribute("src");
+      if (!src || img.dataset.inlining === "1") return;
+      img.dataset.inlining = "1";
+      fetch(src)
+        .then(function (res) { return res.text(); })
+        .then(function (svgText) {
+          var parser = new DOMParser();
+          var doc = parser.parseFromString(svgText, "image/svg+xml");
+          var svg = doc.querySelector("svg");
+          if (!svg) return;
+          svg.setAttribute("class", (img.className ? img.className + " " : "") + "inlined-svg");
+          svg.setAttribute("role", "img");
+          if (img.getAttribute("alt")) svg.setAttribute("aria-label", img.getAttribute("alt"));
+          svg.style.width = "100%";
+          svg.style.height = "auto";
+          svg.style.display = "block";
+          img.parentNode.replaceChild(svg, img);
+          var currentLang = document.documentElement.getAttribute("data-site-lang") || "uz";
+          updateSvgTexts(currentLang);
+        }).catch(function () {});
+    });
+  }
+
   // Inputs carry their copy in attributes rather than [data-lang] siblings,
   // so the placeholder has to be swapped by hand on every language change.
   function applyPlaceholders(lang) {
@@ -38,10 +111,12 @@
                 document.body.getAttribute("data-title-uz");
     if (title) document.title = title;
     applyPlaceholders(lang);
+    updateSvgTexts(lang);
   }
   function initLang() {
     var lang = getStoredLang() || "uz";
     applyLang(lang);
+    inlineAndTranslateSvgs();
     var btn = document.getElementById("langSwitch");
     if (btn) {
       btn.addEventListener("click", function (e) {

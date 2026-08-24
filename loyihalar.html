@@ -41,10 +41,10 @@
       <a href="aloqa.html" class="nav-link" data-nav="contact"><span data-lang="uz">Aloqa</span><span data-lang="ru">Контакты</span><span data-lang="en">Contact</span></a>
     </nav>
     <div class="header-actions">
-      <button class="lang-switch" id="langSwitch" type="button" aria-label="UZ / RU / EN">
-        <span class="lang-option" data-lang-btn="uz">UZ</span><span class="lang-sep">/</span><span class="lang-option" data-lang-btn="ru">RU</span><span class="lang-sep">/</span><span class="lang-option" data-lang-btn="en">EN</span>
+      <button class="lang-switch" id="langSwitch" type="button" aria-label="UZ | RU | EN">
+        <span class="lang-option" data-lang-btn="uz">UZ</span><span class="lang-sep">|</span><span class="lang-option" data-lang-btn="ru">RU</span><span class="lang-sep">|</span><span class="lang-option" data-lang-btn="en">EN</span>
       </button>
-      <a href="aloqa.html" class="btn btn-accent header-cta"><span data-lang="uz">Murojaat qoldirish</span><span data-lang="ru">Оставить заявку</span><span data-lang="en">Send a request</span></a>
+      <a href="aloqa.html" class="btn btn-accent header-cta"><span data-lang="uz">Mutaxassis bilan bog'lanish</span><span data-lang="ru">Связаться со специалистом</span><span data-lang="en">Talk to a specialist</span></a>
       <button class="nav-toggle" id="navToggle" aria-label="Menyu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -54,12 +54,12 @@
 
   <section class="page-hero">
     <div class="container">
-      <div class="eyebrow"><span data-lang="uz">Amalga oshirilgan loyihalar</span><span data-lang="ru">Сделанные проекты</span><span data-lang="en">Delivered projects</span></div>
-      <h1 class="type-on"><span data-lang="uz">So'zlardan ko'ra — natijalar</span><span data-lang="ru">Вместо слов — результаты</span><span data-lang="en">Results, not promises</span></h1>
+      <div class="eyebrow"><span data-lang="uz">Amalga oshirilgan loyihalar</span><span data-lang="ru">Реализованные проекты</span><span data-lang="en">Delivered Projects</span></div>
+      <h1 class="type-on"><span data-lang="uz">Amaliy natijalar va keyslar</span><span data-lang="ru">Практические результаты и кейсы</span><span data-lang="en">Practical Results & Case Studies</span></h1>
       <p class="hero-lede">
-        <span data-lang="uz">Har bir loyiha — aniq muammo, aniq yechim va o'lchanadigan natija: parkovkada navbat, obyektda nazorat, hisobotda qo'lda ish.</span>
-        <span data-lang="ru">Каждый проект — конкретная проблема, конкретное решение и измеримый результат: очередь на парковке, контроль объекта, ручная работа в отчётах.</span>
-        <span data-lang="en">Every project is a specific problem, a specific solution and a measurable result: queues at the car park, control over the site, manual work in the reports.</span>
+        <span data-lang="uz">Har bir amalga oshirilgan loyiha — muayyan texnik vazifa, joriy etilgan muhandislik yechimi va o'lchanadigan aniq natijadir.</span>
+        <span data-lang="ru">Каждый реализованный проект — это конкретная техническая задача, внедрённое инженерное решение и измеримый результат.</span>
+        <span data-lang="en">Every delivered project represents a specific technical challenge, an implemented engineering solution, and a measurable outcome.</span>
       </p>
     </div>
   </section>
@@ -75,101 +75,451 @@
       </div>
 
       <div class="work-grid" data-reveal>
-        <article class="work-card" data-category="parking">
-          <span class="work-cover">
-            <img src="assets/media/case-1.svg" alt="Savdo markazi uchun avtomatik parking" loading="lazy" width="720" height="450">
-            <span class="work-num">01</span>
-          </span>
-          <div class="work-body">
-            <h3><span data-lang="uz">Savdo markazi uchun avtomatik parking</span><span data-lang="ru">Автоматический паркинг для торгового центра</span><span data-lang="en">Automated parking for a shopping centre</span></h3>
-            <p><span data-lang="uz">Ikkita kirish, ANPR kameralar, shlagbaumlar va bo'sh joy tablosi. Abonement egalari to'xtamasdan kiradi, mehmonlar terminaldan to'laydi.</span><span data-lang="ru">Два въезда, ANPR-камеры, шлагбаумы и табло свободных мест. Абонементы проезжают без остановки, гости оплачивают через терминал.</span><span data-lang="en">Two entrances, ANPR cameras, barriers and a free-space display. Season-pass holders drive straight through, visitors pay at the terminal.</span></p>
-            <div class="work-meta">
+
+        <!-- Case 01: Parking -->
+        <article class="case-card" data-category="parking">
+          <div class="case-cover">
+            <img src="assets/media/case-1.svg" alt="Savdo markazida avtomatik parking" loading="lazy" width="720" height="450">
+            <div class="case-badge-row">
+              <span class="case-num">01</span>
+              <span class="case-facility">
+                <span data-lang="uz">Savdo markazi</span>
+                <span data-lang="ru">Торговый центр</span>
+                <span data-lang="en">Shopping Mall</span>
+              </span>
+            </div>
+          </div>
+          <div class="case-body">
+            <h3 class="case-title">
+              <span data-lang="uz">Savdo markazida avtomatik parking</span>
+              <span data-lang="ru">Автоматический паркинг в торговом центре</span>
+              <span data-lang="en">Automated Parking for Shopping Mall</span>
+            </h3>
+
+            <div class="case-specs">
+              <div class="case-spec-row">
+                <span class="case-spec-label is-prob"><span data-lang="uz">Vazifa</span><span data-lang="ru">Задача</span><span data-lang="en">Objective</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Kirish va chiqishda transport oqimini tezlashtirish hamda parkingni to'liq nazorat qilish.</span>
+                  <span data-lang="ru">Ускорить транспортный поток на въезде и выезде, обеспечить полный контроль паркинга.</span>
+                  <span data-lang="en">Accelerate traffic flow at entry and exit points and ensure complete parking control.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-sol"><span data-lang="uz">Yechim</span><span data-lang="ru">Решение</span><span data-lang="en">Solution</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">ANPR kameralar, tezyurar shlagbaumlar, to'lov tizimi va bo'sh joylar monitoringi yagona tizimga birlashtirildi.</span>
+                  <span data-lang="ru">ANPR-камеры, скоростные шлагбаумы, платёжная система и мониторинг свободных мест объединены в единую систему.</span>
+                  <span data-lang="en">ANPR cameras, high-speed barriers, payment system and free-space display integrated into a single platform.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-integ"><span data-lang="uz">Integratsiya</span><span data-lang="ru">Интеграция</span><span data-lang="en">Integration</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Onlayn to'lov tizimlari (Payme/Click) va operatorning markaziy boshqaruv paneli.</span>
+                  <span data-lang="ru">С платёжными сервисами (Payme/Click) и единой панелью оператора паркинга.</span>
+                  <span data-lang="en">With online payment gateways (Payme/Click) and central operator dashboard.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-res"><span data-lang="uz">Natija</span><span data-lang="ru">Результат</span><span data-lang="en">Outcome</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Mijozlar uchun to'xtovsiz kirish-chiqish, navbatlar 70% ga qisqarishi va tushumlar 100% shaffofligi.</span>
+                  <span data-lang="ru">Беспрепятственный проезд клиентов, сокращение очередей на 70% и 100% прозрачность выручки.</span>
+                  <span data-lang="en">Non-stop access for visitors, 70% queue reduction, and 100% revenue transparency.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-tech"><span data-lang="uz">Jihozlar</span><span data-lang="ru">Оборудование</span><span data-lang="en">Equipment</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">ANPR kameralar, tezyurar shlagbaumlar, to'lov terminali, LED info-tablo.</span>
+                  <span data-lang="ru">ANPR-камеры, скоростные шлагбаумы, платёжный терминал, LED-табло.</span>
+                  <span data-lang="en">ANPR cameras, high-speed barriers, payment kiosk, LED display.</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="case-foot">
               <span class="tag">Parking</span>
-              <span class="project-result">-70% <span data-lang="uz">navbat</span><span data-lang="ru">очередей</span><span data-lang="en">queues</span></span>
+              <span class="case-metric">-70% <span data-lang="uz">navbat</span><span data-lang="ru">очередей</span><span data-lang="en">queues</span></span>
+              <span class="case-disclaimer"><span data-lang="uz">* Loyiha yakunidagi ichki hisob-kitob asosida</span><span data-lang="ru">* По внутренним расчётам на момент сдачи проекта</span><span data-lang="en">* Based on internal project-completion assessment</span></span>
             </div>
           </div>
         </article>
-        <article class="work-card" data-category="security">
-          <span class="work-cover">
-            <img src="assets/media/case-2.svg" alt="Ishlab chiqarish korxonasida videokuzatuv" loading="lazy" width="720" height="450">
-            <span class="work-num">02</span>
-          </span>
-          <div class="work-body">
-            <h3><span data-lang="uz">Ishlab chiqarish korxonasida videokuzatuv</span><span data-lang="ru">Видеонаблюдение на производственном предприятии</span><span data-lang="en">Video surveillance at a manufacturing plant</span></h3>
-            <p><span data-lang="uz">64 kamera, 30 kunlik arxiv va yagona monitoring markazi. Sex, ombor va hudud bitta ekranda ko'rinadi.</span><span data-lang="ru">64 камеры, архив на 30 дней и единый центр мониторинга. Цех, склад и территория — на одном экране.</span><span data-lang="en">64 cameras, a 30-day archive and a single monitoring centre. Shop floor, warehouse and grounds on one screen.</span></p>
-            <div class="work-meta">
+
+        <!-- Case 02: Security / Manufacturing -->
+        <article class="case-card" data-category="security">
+          <div class="case-cover">
+            <img src="assets/media/case-2.svg" alt="Ishlab chiqarish korxonasida videokuzatuv va xavfsizlik" loading="lazy" width="720" height="450">
+            <div class="case-badge-row">
+              <span class="case-num">02</span>
+              <span class="case-facility">
+                <span data-lang="uz">Ishlab chiqarish</span>
+                <span data-lang="ru">Производство</span>
+                <span data-lang="en">Manufacturing</span>
+              </span>
+            </div>
+          </div>
+          <div class="case-body">
+            <h3 class="case-title">
+              <span data-lang="uz">Ishlab chiqarish korxonasida videokuzatuv</span>
+              <span data-lang="ru">Видеонаблюдение на производственном предприятии</span>
+              <span data-lang="en">Video Surveillance at Manufacturing Plant</span>
+            </h3>
+
+            <div class="case-specs">
+              <div class="case-spec-row">
+                <span class="case-spec-label is-prob"><span data-lang="uz">Vazifa</span><span data-lang="ru">Задача</span><span data-lang="en">Objective</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Katta hududiy sexlar, omborlar va perimetr bo'yicha uzluksiz 24/7 xavfsizlik nazorati.</span>
+                  <span data-lang="ru">Обеспечить круглосуточную безопасность цехов, складов и периметра на большой территории.</span>
+                  <span data-lang="en">Ensure round-the-clock security across expansive workshops, warehouses, and perimeter.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-sol"><span data-lang="uz">Yechim</span><span data-lang="ru">Решение</span><span data-lang="en">Solution</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">64 ta intellektual IP-kamera, perimetr analitikasi va yagona situatsion monitoring markazi o'rnatildi.</span>
+                  <span data-lang="ru">Установлены 64 IP-камеры с видеоаналитикой периметра и развёрнут единый центр мониторинга.</span>
+                  <span data-lang="en">Installed 64 smart IP cameras, perimeter analytics, and a centralized situational monitoring hub.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-integ"><span data-lang="uz">Integratsiya</span><span data-lang="ru">Интеграция</span><span data-lang="en">Integration</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Perimetr xavfsizlik sensorlari, NVR serverlar va masofaviy VMS monitoring tizimi.</span>
+                  <span data-lang="ru">С охранными датчиками периметра, NVR-серверами и VMS-системой удалённого доступа.</span>
+                  <span data-lang="en">With perimeter alarm sensors, central NVR servers, and remote VMS software.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-res"><span data-lang="uz">Natija</span><span data-lang="ru">Результат</span><span data-lang="en">Outcome</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Hodisalarga munosabat bildirish 3 barobar tezlashdi, 30 kunlik to'liq arxiv va ko'r zonalarsiz nazorat.</span>
+                  <span data-lang="ru">Реакция на инциденты ускорилась в 3 раза, обеспечен 30-дневный архив без слепых зон.</span>
+                  <span data-lang="en">Incident reaction 3x faster, full 30-day archive secured, and zero blind spots.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-tech"><span data-lang="uz">Jihozlar</span><span data-lang="ru">Оборудование</span><span data-lang="en">Equipment</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">4K/2K IP-kameralar, NVR serverlar, Smart VMS monitoring dasturi.</span>
+                  <span data-lang="ru">4K/2K IP-камеры, серверы NVR, программный комплекс Smart VMS.</span>
+                  <span data-lang="en">4K/2K IP cameras, NVR storage servers, Smart VMS management platform.</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="case-foot">
               <span class="tag">Security</span>
-              <span class="project-result">3x <span data-lang="uz">tez aniqlash</span><span data-lang="ru">быстрее реакция</span><span data-lang="en">faster detection</span></span>
+              <span class="case-metric">3x <span data-lang="uz">tezkor reaksiya</span><span data-lang="ru">быстрее реакция</span><span data-lang="en">faster reaction</span></span>
+              <span class="case-disclaimer"><span data-lang="uz">* Loyiha yakunidagi ichki hisob-kitob asosida</span><span data-lang="ru">* По внутренним расчётам на момент сдачи проекта</span><span data-lang="en">* Based on internal project-completion assessment</span></span>
             </div>
           </div>
         </article>
-        <article class="work-card" data-category="automation">
-          <span class="work-cover">
+
+        <!-- Case 03: Automation / Business Center -->
+        <article class="case-card" data-category="automation">
+          <div class="case-cover">
             <img src="assets/media/case-3.svg" alt="Biznes-markazda kirish nazorati va ish vaqti hisobi" loading="lazy" width="720" height="450">
-            <span class="work-num">03</span>
-          </span>
-          <div class="work-body">
-            <h3><span data-lang="uz">Biznes-markazda kirish nazorati va ish vaqti hisobi</span><span data-lang="ru">СКУД и учёт рабочего времени в бизнес-центре</span><span data-lang="en">Access control and time tracking in a business centre</span></h3>
-            <p><span data-lang="uz">Turniketlar, karta va yuz orqali kirish. Ish vaqti tabeli o'zi shakllanadi — buxgalteriya qo'lda hisoblamaydi.</span><span data-lang="ru">Турникеты, доступ по карте и по лицу. Табель рабочего времени формируется сам — бухгалтерии не нужно считать вручную.</span><span data-lang="en">Turnstiles with card and face access. The timesheet builds itself — accounting no longer counts by hand.</span></p>
-            <div class="work-meta">
+            <div class="case-badge-row">
+              <span class="case-num">03</span>
+              <span class="case-facility">
+                <span data-lang="uz">Biznes-markaz</span>
+                <span data-lang="ru">Бизнес-центр</span>
+                <span data-lang="en">Business Center</span>
+              </span>
+            </div>
+          </div>
+          <div class="case-body">
+            <h3 class="case-title">
+              <span data-lang="uz">Biznes-markazda kirish nazorati va ish vaqti hisobi</span>
+              <span data-lang="ru">СКУД и учёт рабочего времени в бизнес-центре</span>
+              <span data-lang="en">Access Control & Time Tracking in Business Center</span>
+            </h3>
+
+            <div class="case-specs">
+              <div class="case-spec-row">
+                <span class="case-spec-label is-prob"><span data-lang="uz">Vazifa</span><span data-lang="ru">Задача</span><span data-lang="en">Objective</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Begona shaxslar kirishini cheklash, xodimlar harakatini nazorat qilish va tabelni avtomatlashtirish.</span>
+                  <span data-lang="ru">Исключить посторонний доступ, упорядочить проход сотрудников и автоматизировать табель.</span>
+                  <span data-lang="en">Restrict unauthorized access, streamline employee entry, and automate timesheets.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-sol"><span data-lang="uz">Yechim</span><span data-lang="ru">Решение</span><span data-lang="en">Solution</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Biometrik (Face ID) va RFID turniketlar, zonalangan kirish huquqlari va markaziy boshqaruv o'rnatildi.</span>
+                  <span data-lang="ru">Установлены скоростные турникеты с биометрией (Face ID / RFID) и зональным разделением доступа.</span>
+                  <span data-lang="en">Installed biometric (Face ID / RFID) speed-gates with zone-based access authorization.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-integ"><span data-lang="uz">Integratsiya</span><span data-lang="ru">Интеграция</span><span data-lang="en">Integration</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">1C:HRM buxgalteriya tizimi, xodimlar bazasi va Telegram xabarnoma xizmati bilan.</span>
+                  <span data-lang="ru">С корпоративной системой 1С:ЗУП, кадровой базой и Telegram-ботом уведомлений.</span>
+                  <span data-lang="en">With 1C:HRM payroll system, personnel database, and Telegram notification bot.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-res"><span data-lang="uz">Natija</span><span data-lang="ru">Результат</span><span data-lang="en">Outcome</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Qo'lda tabel yuritish 90% ga qisqardi, mehnat intizomi mustahkamlandi va ruxsatsiz kirishlar yo'qoldi.</span>
+                  <span data-lang="ru">Ручной учёт рабочего времени сокращён на 90%, повышена дисциплина и устранены нарушения.</span>
+                  <span data-lang="en">Manual timesheets reduced by 90%, discipline improved, and unauthorized entries stopped.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-tech"><span data-lang="uz">Jihozlar</span><span data-lang="ru">Оборудование</span><span data-lang="en">Equipment</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Face ID terminallari, flap-turniketlar, СКУД boshqaruv kontrollerlari.</span>
+                  <span data-lang="ru">Терминалы Face ID, скоростные турникеты, контроллеры СКУД.</span>
+                  <span data-lang="en">Face ID terminals, speed turnstiles, central access controllers.</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="case-foot">
               <span class="tag">Automation</span>
-              <span class="project-result">-90% <span data-lang="uz">qo'lda tabel</span><span data-lang="ru">ручного табеля</span><span data-lang="en">manual timesheets</span></span>
+              <span class="case-metric">-90% <span data-lang="uz">qo'lda tabel</span><span data-lang="ru">ручного табеля</span><span data-lang="en">manual timesheets</span></span>
+              <span class="case-disclaimer"><span data-lang="uz">* Loyiha yakunidagi ichki hisob-kitob asosida</span><span data-lang="ru">* По внутренним расчётам на момент сдачи проекта</span><span data-lang="en">* Based on internal project-completion assessment</span></span>
             </div>
           </div>
         </article>
-        <article class="work-card" data-category="security">
-          <span class="work-cover">
+
+        <!-- Case 04: Security / Residential -->
+        <article class="case-card" data-category="security">
+          <div class="case-cover">
             <img src="assets/media/case-4.svg" alt="Turar-joy majmuasida domofon va hudud nazorati" loading="lazy" width="720" height="450">
-            <span class="work-num">04</span>
-          </span>
-          <div class="work-body">
-            <h3><span data-lang="uz">Turar-joy majmuasida domofon va hudud nazorati</span><span data-lang="ru">Домофония и контроль территории в жилом комплексе</span><span data-lang="en">Intercom and perimeter control in a residential complex</span></h3>
-            <p><span data-lang="uz">IP-domofon, hudud kameralari va mehmon kirishi. Rezident mehmonga telefonidan ruxsat beradi.</span><span data-lang="ru">IP-домофония, камеры по периметру и гостевой доступ. Житель пропускает гостя прямо с телефона.</span><span data-lang="en">IP intercom, perimeter cameras and guest access. Residents let visitors in straight from their phone.</span></p>
-            <div class="work-meta">
+            <div class="case-badge-row">
+              <span class="case-num">04</span>
+              <span class="case-facility">
+                <span data-lang="uz">Turar-joy majmuasi</span>
+                <span data-lang="ru">Жилой комплекс</span>
+                <span data-lang="en">Residential Complex</span>
+              </span>
+            </div>
+          </div>
+          <div class="case-body">
+            <h3 class="case-title">
+              <span data-lang="uz">Turar-joy majmuasida domofon va hudud nazorati</span>
+              <span data-lang="ru">Домофония и контроль территории в жилом комплексе</span>
+              <span data-lang="en">Intercom & Perimeter Control in Residential Complex</span>
+            </h3>
+
+            <div class="case-specs">
+              <div class="case-spec-row">
+                <span class="case-spec-label is-prob"><span data-lang="uz">Vazifa</span><span data-lang="ru">Задача</span><span data-lang="en">Objective</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Majmua hududi xavfsizligini ta'minlash, mehmonlar kirishini qulay qilish va konsyerj xizmatini yengillashtirish.</span>
+                  <span data-lang="ru">Обеспечить безопасность закрытого ЖК, упростить гостевой пропуск и разгрузить службу консьержей.</span>
+                  <span data-lang="en">Secure a gated residential complex, simplify guest entry, and streamline concierge operations.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-sol"><span data-lang="uz">Yechim</span><span data-lang="ru">Решение</span><span data-lang="en">Solution</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">IP-videodomofonlar, hovli va podyezd kameralari hamda aholi uchun mobil ilova joriy qilindi.</span>
+                  <span data-lang="ru">Внедрены IP-видеодомофоны, камеры двора и подъездов, мобильное приложение для жителей.</span>
+                  <span data-lang="en">Implemented IP video intercoms, courtyard cameras, and a dedicated resident mobile app.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-integ"><span data-lang="uz">Integratsiya</span><span data-lang="ru">Интеграция</span><span data-lang="en">Integration</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Aholi mobil ilovasi, avtomatik mehmon QR-ruxsatnomalari va konsyerj boshqaruv konsoli.</span>
+                  <span data-lang="ru">С мобильным приложением жильцов, гостевыми QR-пропусками и консолью консьержа.</span>
+                  <span data-lang="en">With resident mobile apps, temporary guest QR-codes, and concierge console.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-res"><span data-lang="uz">Natija</span><span data-lang="ru">Результат</span><span data-lang="en">Outcome</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Mehmonga ruxsat berish 2 daqiqagacha tezlashdi, begonalarning kirishi taqiqlandi va qulaylik oshdi.</span>
+                  <span data-lang="ru">Пропуск гостя оформляется за 2 минуты, исключены посторонние лица, повышен комфорт.</span>
+                  <span data-lang="en">Guest authorization under 2 minutes, non-residents restricted, and high comfort for residents.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-tech"><span data-lang="uz">Jihozlar</span><span data-lang="ru">Оборудование</span><span data-lang="en">Equipment</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">IP-videodomofon panellari, hovli kameralari, boshqaruv serveri.</span>
+                  <span data-lang="ru">IP-панели домофонии, камеры видеонаблюдения, сервер управления.</span>
+                  <span data-lang="en">IP intercom panels, outdoor IP cameras, central control server.</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="case-foot">
               <span class="tag">Security</span>
-              <span class="project-result">2 min <span data-lang="uz">mehmon kirishi</span><span data-lang="ru">пропуск гостя</span><span data-lang="en">guest access</span></span>
+              <span class="case-metric">2 min <span data-lang="uz">mehmon kirishi</span><span data-lang="ru">пропуск гостя</span><span data-lang="en">guest access</span></span>
+              <span class="case-disclaimer"><span data-lang="uz">* Loyiha yakunidagi ichki hisob-kitob asosida</span><span data-lang="ru">* По внутренним расчётам на момент сдачи проекта</span><span data-lang="en">* Based on internal project-completion assessment</span></span>
             </div>
           </div>
         </article>
-        <article class="work-card" data-category="integration">
-          <span class="work-cover">
+
+        <!-- Case 05: Integration / Logistics -->
+        <article class="case-card" data-category="integration">
+          <div class="case-cover">
             <img src="assets/media/case-5.svg" alt="Logistika markazida 1C bilan integratsiya" loading="lazy" width="720" height="450">
-            <span class="work-num">05</span>
-          </span>
-          <div class="work-body">
-            <h3><span data-lang="uz">Logistika markazida 1C bilan integratsiya</span><span data-lang="ru">Интеграция с 1С в логистическом центре</span><span data-lang="en">1C integration at a logistics hub</span></h3>
-            <p><span data-lang="uz">Shlagbaum, avtotarozi va 1C bitta jarayonga ulandi: mashina kirdi — hujjat o'zi shakllanadi.</span><span data-lang="ru">Шлагбаум, автовесы и 1С связаны в один процесс: машина заехала — документ формируется сам.</span><span data-lang="en">Barrier, weighbridge and 1C linked into one process: a truck drives in and the paperwork is generated automatically.</span></p>
-            <div class="work-meta">
+            <div class="case-badge-row">
+              <span class="case-num">05</span>
+              <span class="case-facility">
+                <span data-lang="uz">Logistika markazi</span>
+                <span data-lang="ru">Логистический центр</span>
+                <span data-lang="en">Logistics Hub</span>
+              </span>
+            </div>
+          </div>
+          <div class="case-body">
+            <h3 class="case-title">
+              <span data-lang="uz">Logistika markazida 1C bilan integratsiya</span>
+              <span data-lang="ru">Интеграция с 1С в логистическом центре</span>
+              <span data-lang="en">1C Integration at Logistics Hub</span>
+            </h3>
+
+            <div class="case-specs">
+              <div class="case-spec-row">
+                <span class="case-spec-label is-prob"><span data-lang="uz">Vazifa</span><span data-lang="ru">Задача</span><span data-lang="en">Objective</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Yuk transporti kirishi, tarozi ko'rsatkichlari va hujjatlashtirish jarayonidagi kechikishlarni yo'qotish.</span>
+                  <span data-lang="ru">Устранить задержки при взвешивании и оформлении грузового транспорта, исключить ошибки.</span>
+                  <span data-lang="en">Eliminate delays and manual paperwork during freight weighing and dispatch registry.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-sol"><span data-lang="uz">Yechim</span><span data-lang="ru">Решение</span><span data-lang="en">Solution</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Shlagbaum, avtotarozi va yuk ANPR kameralari bitta avtomatlashtirilgan jarayonga bog'landi.</span>
+                  <span data-lang="ru">Шлагбаумы, автовесы и грузовые ANPR-камеры связаны в единый автоматизированный процесс.</span>
+                  <span data-lang="en">Linked barriers, weighbridges, and freight ANPR cameras into a single automated pipeline.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-integ"><span data-lang="uz">Integratsiya</span><span data-lang="ru">Интеграция</span><span data-lang="en">Integration</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">1C korporativ hisob tizimi, elektron yuk xatlari moduli va tarozi kontrollerlari.</span>
+                  <span data-lang="ru">С корпоративной системой 1С, электронными накладными и контроллерами автовесов.</span>
+                  <span data-lang="en">With corporate 1C ERP system, electronic consignment notes, and weighbridge controllers.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-res"><span data-lang="uz">Natija</span><span data-lang="ru">Результат</span><span data-lang="en">Outcome</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Qo'lda kiritish 85% ga qisqardi, mashina o'tkazish tezligi oshdi va tarozi ma'lumotlari 100% aniqlandi.</span>
+                  <span data-lang="ru">Ручной ввод данных сокращён на 85%, ускорен проезд транспорта и исключены ошибки по весу.</span>
+                  <span data-lang="en">Manual data entry cut by 85%, truck turnaround accelerated, and weight discrepancy zeroed.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-tech"><span data-lang="uz">Jihozlar</span><span data-lang="ru">Оборудование</span><span data-lang="en">Equipment</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Yuk ANPR kameralari, sanoat shlagbaumlari, 1C integratsiya moduli.</span>
+                  <span data-lang="ru">Грузовые ANPR-камеры, индустриальные шлагбаумы, модуль интеграции 1С.</span>
+                  <span data-lang="en">Heavy-duty ANPR cameras, industrial barriers, 1C bridge module.</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="case-foot">
               <span class="tag">Integration</span>
-              <span class="project-result">-85% <span data-lang="uz">qo'lda kiritish</span><span data-lang="ru">ручного ввода</span><span data-lang="en">manual data entry</span></span>
+              <span class="case-metric">-85% <span data-lang="uz">qo'lda kiritish</span><span data-lang="ru">ручного ввода</span><span data-lang="en">manual data entry</span></span>
+              <span class="case-disclaimer"><span data-lang="uz">* Loyiha yakunidagi ichki hisob-kitob asosida</span><span data-lang="ru">* По внутренним расчётам на момент сдачи проекта</span><span data-lang="en">* Based on internal project-completion assessment</span></span>
             </div>
           </div>
         </article>
-        <article class="work-card" data-category="integration">
-          <span class="work-cover">
+
+        <!-- Case 06: Integration / Medical -->
+        <article class="case-card" data-category="integration">
+          <div class="case-cover">
             <img src="assets/media/case-6.svg" alt="Tibbiyot markazida monitoring va xabarnomalar" loading="lazy" width="720" height="450">
-            <span class="work-num">06</span>
-          </span>
-          <div class="work-body">
-            <h3><span data-lang="uz">Tibbiyot markazida monitoring va xabarnomalar</span><span data-lang="ru">Мониторинг и уведомления в медицинском центре</span><span data-lang="en">Monitoring and alerts at a medical centre</span></h3>
-            <p><span data-lang="uz">Kameralar, kirish nazorati va Telegram xabarnomalari yagona panelga yig'ildi.</span><span data-lang="ru">Камеры, контроль доступа и уведомления в Telegram собраны в единую панель.</span><span data-lang="en">Cameras, access control and Telegram alerts brought together in a single panel.</span></p>
-            <div class="work-meta">
+            <div class="case-badge-row">
+              <span class="case-num">06</span>
+              <span class="case-facility">
+                <span data-lang="uz">Tibbiyot markazi</span>
+                <span data-lang="ru">Медицинский центр</span>
+                <span data-lang="en">Medical Center</span>
+              </span>
+            </div>
+          </div>
+          <div class="case-body">
+            <h3 class="case-title">
+              <span data-lang="uz">Tibbiyot markazida monitoring va xabarnomalar</span>
+              <span data-lang="ru">Мониторинг и уведомления в медицинском центре</span>
+              <span data-lang="en">Monitoring & Alerts at Medical Center</span>
+            </h3>
+
+            <div class="case-specs">
+              <div class="case-spec-row">
+                <span class="case-spec-label is-prob"><span data-lang="uz">Vazifa</span><span data-lang="ru">Задача</span><span data-lang="en">Objective</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Bemorlar xavfsizligi, qimmatbaho uskunalar va steril zonalarga (operatsion xonalar) kirishni qat'iy nazorat qilish.</span>
+                  <span data-lang="ru">Обеспечить безопасность пациентов, защитить оборудование и строго контролировать доступ в чистые зоны.</span>
+                  <span data-lang="en">Ensure patient safety, safeguard high-value medical assets, and strictly control sterile zone access.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-sol"><span data-lang="uz">Yechim</span><span data-lang="ru">Решение</span><span data-lang="en">Solution</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Zonali biometrik kirish nazorati, intellektual kameralar va markaziy dispetcherlik boshqaruvi.</span>
+                  <span data-lang="ru">Развёрнут зональный биометрический СКУД, умное видеонаблюдение и центральный диспетчерский пульт.</span>
+                  <span data-lang="en">Deployed zoned biometric access control, intelligent video surveillance, and central dispatch console.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-integ"><span data-lang="uz">Integratsiya</span><span data-lang="ru">Интеграция</span><span data-lang="en">Integration</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Navbatchi dispetcher xizmati, yong'in signalizatsiyasi va Telegram tezkor xabarnomalari bilan.</span>
+                  <span data-lang="ru">С диспетчерской службой, пожарной сигнализацией и Telegram-ботом экстренных уведомлений.</span>
+                  <span data-lang="en">With on-duty dispatch desk, fire alarm system, and instant Telegram alert bot.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-res"><span data-lang="uz">Natija</span><span data-lang="ru">Результат</span><span data-lang="en">Outcome</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">24/7 uzluksiz nazorat, favqulodda vaziyatlarda darhol xabardor qilish va to'liq xavfsiz muhit.</span>
+                  <span data-lang="ru">Круглосуточный мониторинг 24/7, мгновенное оповещение при инцидентах и защита чистых зон.</span>
+                  <span data-lang="en">24/7 uninterrupted monitoring, instantaneous incident alerts, and sterile zones fully protected.</span>
+                </span>
+              </div>
+              <div class="case-spec-row">
+                <span class="case-spec-label is-tech"><span data-lang="uz">Jihozlar</span><span data-lang="ru">Оборудование</span><span data-lang="en">Equipment</span></span>
+                <span class="case-spec-val">
+                  <span data-lang="uz">Smart IP-kameralar, toza zonalar uchun biometrik sensorlar, monitoring serveri.</span>
+                  <span data-lang="ru">Smart IP-камеры, бесконтактная биометрия для чистых зон, сервер мониторинга.</span>
+                  <span data-lang="en">Smart IP cameras, contactless clean-room biometrics, monitoring server.</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="case-foot">
               <span class="tag">Integration</span>
-              <span class="project-result">24/7 <span data-lang="uz">nazorat</span><span data-lang="ru">контроль</span><span data-lang="en">control</span></span>
+              <span class="case-metric">24/7 <span data-lang="uz">nazorat</span><span data-lang="ru">контроль</span><span data-lang="en">control</span></span>
             </div>
           </div>
         </article>
+
       </div>
+
+      <!-- CASES DISCLAIMER NOTE -->
+      <p class="cases-disclaimer-note" data-reveal>
+        <span data-lang="uz">* Ko'rsatilgan barcha raqamli ko'rsatkichlar (foiz, koeffitsient va boshqalar) loyiha topshirilgandan keyingi ichki hisob-kitob asosida shakllantirilgan. Aniq raqamlar ob'ekt xususiyatlariga qarab farq qilishi mumkin.</span>
+        <span data-lang="ru">* Все числовые показатели (проценты, коэффициенты и т. д.) сформированы на основе внутренней оценки по итогам сдачи проекта. Точные значения могут варьироваться в зависимости от характеристик объекта.</span>
+        <span data-lang="en">* All numerical figures (percentages, multiples, etc.) are derived from internal project-completion assessments. Actual results may vary depending on facility characteristics.</span>
+      </p>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="on-dark cta-band" data-reveal>
     <div class="container">
-      <div class="eyebrow"><span data-lang="uz">Navbatdagi loyiha</span><span data-lang="ru">Следующий проект</span><span data-lang="en">Next project</span></div>
-      <h2><span data-lang="uz">Sizning loyihangiz shu yerda bo'lishi mumkin</span><span data-lang="ru">Здесь может быть ваш проект</span><span data-lang="en">Your project could be here</span></h2>
+      <div class="eyebrow"><span data-lang="uz">Navbatdagi loyiha</span><span data-lang="ru">Следующий проект</span><span data-lang="en">Next Project</span></div>
+      <h2><span data-lang="uz">Obyektingizda shunday natijaga erishmoqchimisiz?</span><span data-lang="ru">Планируете аналогичное внедрение на своём объекте?</span><span data-lang="en">Looking to achieve similar results for your facility?</span></h2>
+      <p class="hero-lede"><span data-lang="uz">Bizga obyektingiz haqida ma'lumot bering — loyiha hisob-kitobi va optimal yechim variantlarini taqdim etamiz.</span><span data-lang="ru">Расскажите о задаче вашего объекта — подготовим расчёт проекта и предложим проверенные варианты реализации.</span><span data-lang="en">Tell us about your facility's operational goals — we will prepare a technical proposal and deployment roadmap.</span></p>
       <div class="hero-actions">
-        <a href="aloqa.html" class="btn btn-accent btn-arrow"><span data-lang="uz">Murojaat qoldirish</span><span data-lang="ru">Оставить заявку</span><span data-lang="en">Send a request</span></a>
+        <a href="aloqa.html" class="btn btn-accent btn-arrow"><span data-lang="uz">Shunga o'xshash loyiha kerak</span><span data-lang="ru">Нужен похожий проект</span><span data-lang="en">Request similar deployment</span></a>
       </div>
     </div>
   </section>
@@ -180,7 +530,7 @@
   <div class="container footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="logo-mark logo-full" aria-label="SoftData"><img src="assets/media/softdata-logo.png" alt="SoftData - Artificial Intelligence System" width="796" height="168"></a>
-      <p><span data-lang="uz">Har qanday mavjud resurslarni tizimli avtomatlashtirish yordamida yuqori xavfsizlikka erishiladi.</span><span data-lang="ru">Высокий уровень безопасности достигается системной автоматизацией любых имеющихся ресурсов.</span><span data-lang="en">Systematic automation across your existing resources delivers a high level of security.</span></p>
+      <p><span data-lang="uz">Obyektning yagona raqamli infratuzilmasi: uskunalar, dasturiy ta'minot va IT-tizimlarni bitta boshqaruv kompleksiga birlashtiramiz.</span><span data-lang="ru">Единая цифровая инфраструктура объекта: объединяем оборудование, ПО и IT-системы в управляемый комплекс.</span><span data-lang="en">Unified facility digital infrastructure: integrating equipment, software, and IT systems into a manageable complex.</span></p>
     </div>
     <div class="footer-col">
       <span class="footer-title"><span data-lang="uz">Sahifalar</span><span data-lang="ru">Страницы</span><span data-lang="en">Pages</span></span>

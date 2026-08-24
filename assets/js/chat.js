@@ -123,9 +123,9 @@
     {
       kw: ["mavjud jihoz", "eski kamera", "almashtirish", "ishlatib bo'ladi", "уже установлен", "существующ", "имеющ", "менять", "existing equipment", "already have", "reuse", "keep my"],
       a: {
-        uz: "Ko'p hollarda ha — mavjud kamera va shlagbaumlaringizni yangi tizimga ulash mumkin. Auditda har bir jihozni tekshiramiz va qaysilari qoladi, qaysilari almashtirilishi kerakligini sababi bilan aytamiz. Ishlaydigan jihozni shunchaki sotish uchun almashtirishni taklif qilmaymiz.",
-        ru: "В большинстве случаев да — уже установленные камеры и шлагбаумы можно подключить к новой системе. На аудите проверяем каждое устройство и объясняем, что останется, а что стоит заменить и почему. Мы не предлагаем менять работающее оборудование ради продажи.",
-        en: "In most cases yes — your existing cameras and barriers can be connected to the new system. During the audit we check every device and explain what stays, what should be replaced and why. We never suggest replacing working equipment just to make a sale."
+        uz: "Ko'p hollarda ha — mavjud kamera va shlagbaumlaringizni yangi tizimga ulash mumkin. Auditda har bir jihozni tekshiramiz va qaysilari qolishi yoki yangilanishini asoslab beramiz. Mavjud va soz ishlayotgan infratuzilmani maksimal darajada saqlab qolishga intilamiz.",
+        ru: "В большинстве случаев да — уже установленные камеры и шлагбаумы можно подключить к новой системе. На аудите проверяем каждое устройство и объясняем технические возможности. Мы стремимся сохранить исправно работающую инфраструктуру и оптимизировать бюджет.",
+        en: "In most cases yes — your existing cameras and barriers can be connected to the new system. During the audit we inspect every device and explain technical feasibility. We aim to preserve properly functioning infrastructure and optimize the project budget."
       }
     },
     {
