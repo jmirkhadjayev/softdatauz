@@ -2405,130 +2405,237 @@ html[data-site-lang="en"] [data-lang="uz"] { display: none !important; }
 .nav-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ===========================================================
-   GLOBAL MOBILE RESPONSIVE — COMPREHENSIVE FIXES
+   GLOBAL MOBILE RESPONSIVE & HARDWARE ACCELERATION STANDARDS
    =========================================================== */
 
-/* ---- Tablet 768px ---- */
+/* Global touch & fluid sizing */
+html {
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  overflow-x: clip;
+  width: 100%;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+button, a, .chip, .filter-btn, .lang-option, .nav-toggle, .chat-launcher, .chat-send, .btn {
+  touch-action: manipulation;
+}
+
+/* Fluid Scalable SVGs & Visual Graphics */
+svg.inlined-svg, .dir-media svg, .service-visual svg, .case-cover svg, .card-media svg {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Safe area insets for notched phones */
+.site-header {
+  padding-top: env(safe-area-inset-top, 0);
+}
+.site-foot {
+  padding-bottom: max(32px, env(safe-area-inset-bottom, 0));
+}
+
+/* ---- Tablet & Small Desktop (<= 1080px) ---- */
+@media (max-width: 1080px) {
+  .dir-grid { grid-template-columns: 1fr !important; }
+  .dir-card-wide { grid-column: auto !important; }
+  .dir-card-wide .dir-media { aspect-ratio: 16 / 10 !important; }
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .hero-visual { max-width: 580px; margin: 0 auto; width: 100%; }
+}
+
+/* ---- Tablet Portrait & Large Phones (<= 768px) ---- */
 @media (max-width: 768px) {
-  /* Typography scaling */
-  h1 { font-size: clamp(28px, 6vw, 44px); }
-  h2 { font-size: clamp(22px, 5vw, 34px); }
+  /* Typography */
+  h1 { font-size: clamp(26px, 5.5vw, 38px); }
+  h2 { font-size: clamp(21px, 4.5vw, 30px); }
   h3 { font-size: clamp(17px, 3.5vw, 22px); }
 
-  /* Section padding */
-  section { padding-block: clamp(48px, 8vw, 80px); }
+  /* Forms - prevent iOS safari auto zoom */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+
+  /* Section Spacing */
+  section { padding-block: clamp(42px, 7vw, 72px); }
+  .page-hero { padding-block: clamp(52px, 9vw, 90px) clamp(32px, 5vw, 52px); }
 
   /* Hero */
-  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
-  .hero h1.hero-h1-long { font-size: clamp(20px, 4.5vw, 30px); max-width: 100%; }
-  .hero-lede { font-size: clamp(15px, 3vw, 18px); max-width: 100%; }
-  .hero-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
-  .hero-actions .btn { width: 100%; justify-content: center; }
+  .hero h1.hero-h1-long { font-size: clamp(19px, 4.2vw, 26px); max-width: 100%; }
+  .hero-lede { font-size: clamp(14.5px, 2.8vw, 17px); max-width: 100%; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero-actions .btn { width: 100%; justify-content: center; text-align: center; }
   .hero-visual { display: none; }
+
+  /* Direction cards */
+  .dir-media, .dir-card-wide .dir-media {
+    aspect-ratio: 16 / 10 !important;
+    height: auto !important;
+  }
+  .dir-body {
+    padding: 22px 20px 24px !important;
+    gap: 12px;
+  }
+  .dir-card h3 {
+    font-size: 20px;
+  }
+  .dir-card p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  /* Horizontal touch scrolling for filters & quick navigation */
+  .quick-nav, .filter-bar, .tag-filter-bar {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    scrollbar-width: none;
+    gap: 8px;
+  }
+  .quick-nav::-webkit-scrollbar, .filter-bar::-webkit-scrollbar, .tag-filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+  .quick-nav .chip, .filter-bar .chip, .filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
 
   /* Stats */
   .stats-row { grid-template-columns: repeat(2, 1fr); }
-  .stat { padding: 24px 18px; }
+  .stat { padding: 22px 16px; }
   .stat:nth-child(3) { border-left: none; }
 
-  /* Dir cards */
-  .dir-grid { grid-template-columns: 1fr !important; }
-  .dir-card-wide { grid-column: auto !important; }
-
-  /* Section head */
-  .section-head { flex-direction: column; align-items: flex-start; gap: 20px; }
+  /* Section heads */
+  .section-head { flex-direction: column; align-items: flex-start; gap: 18px; }
   .section-head .btn { width: 100%; text-align: center; justify-content: center; }
 
-  /* Footer */
-  .foot-grid { grid-template-columns: 1fr !important; gap: 40px; }
-  .foot-links-grid { grid-template-columns: repeat(2, 1fr); }
-
-  /* Process steps */
+  /* Grids */
+  .foot-grid { grid-template-columns: 1fr !important; gap: 36px; }
+  .foot-links-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 16px; }
   .process-list { grid-template-columns: 1fr !important; }
-
-  /* Clients grid */
   .clients-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
-  /* Projects grid */
   .projects-grid { grid-template-columns: 1fr !important; }
-
-  /* Partners */
-  .partners-grid { grid-template-columns: repeat(2, 1fr) !important; }
-  .partner-logo { padding: 20px 16px; }
-
-  /* Testimonials */
+  .partners-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px; }
+  .partner-logo { padding: 18px 14px; }
   .testimonials-grid { grid-template-columns: 1fr !important; }
-
-  /* Contact form */
-  .contact-grid { grid-template-columns: 1fr !important; }
+  .contact-grid { grid-template-columns: 1fr !important; gap: 32px; }
   .form-row-2 { grid-template-columns: 1fr !important; }
 
   /* Chat widget */
-  .chat-widget { right: 16px; bottom: 16px; }
-  .chat-panel { width: calc(100vw - 32px); max-width: 400px; }
+  .chat-widget { right: 16px; bottom: max(16px, env(safe-area-inset-bottom, 0)); }
+  .chat-panel { width: calc(100vw - 32px); max-width: 390px; }
 }
 
-/* ---- Small phone 480px ---- */
+/* ---- Standard & Small Mobile (<= 480px) ---- */
 @media (max-width: 480px) {
-  /* Container */
   :root { --gutter: 16px; }
 
   /* Header */
-  .header-inner { height: 64px; gap: 10px; }
-  .main-nav { top: 64px; }
-  .logo-mark img { height: 24px; }
-  .lang-switch { font-size: 11px; padding: 5px 9px; gap: 3px; }
+  .header-inner { height: 62px; gap: 10px; }
+  .main-nav {
+    top: 62px;
+    height: calc(100dvh - 62px);
+    padding: 20px 20px 40px;
+  }
+  .main-nav .nav-link {
+    font-size: 19px;
+    padding: 15px 0;
+  }
+  .logo-mark img { height: 25px; }
+  .logo-mark.logo-full img { height: 38px; }
+
+  /* Language Switcher - compact & crisp */
+  .lang-switch {
+    display: inline-flex !important;
+    font-size: 11px !important;
+    padding: 5px 8px !important;
+    gap: 3px !important;
+  }
+  .lang-option {
+    padding: 2px 5px !important;
+  }
   .lang-sep { display: none; }
 
   /* Typography */
-  h1 { font-size: clamp(24px, 7vw, 36px); }
-  h2 { font-size: clamp(20px, 6vw, 28px); }
+  h1 { font-size: clamp(23px, 6.8vw, 32px); }
+  h2 { font-size: clamp(19px, 5.5vw, 26px); }
 
-  /* Buttons */
-  .btn { padding: 13px 22px; font-size: 14px; }
+  /* Buttons & Touch Targets */
+  .btn { padding: 13px 20px; font-size: 14px; }
 
   /* Stats */
-  .stats-row { grid-template-columns: repeat(2, 1fr); }
-  .stat-value { font-size: clamp(26px, 7vw, 36px); }
+  .stat-value { font-size: clamp(24px, 6.5vw, 32px); }
+  .stat-label { font-size: 12px; }
+  .stat { padding: 18px 12px; }
 
   /* Card grid */
   .card-grid { grid-template-columns: 1fr; }
+  .card > *:not(.card-media):not(.card-shine) { padding-inline: 20px; }
 
   /* Marquee chips */
   .chip { font-size: 12px; padding: 6px 12px; }
 
   /* Hero */
-  .hero { padding-block: 48px 36px; }
-  .hero h1.hero-h1-long { font-size: clamp(18px, 5.5vw, 26px); }
+  .hero { padding-block: 40px 30px; }
+  .hero h1.hero-h1-long { font-size: clamp(17.5px, 5vw, 22px); }
   .hero-actions { gap: 10px; }
-  .hero-meta { font-size: 12px; }
+  .hero-meta { font-size: 11.5px; }
 
   /* Footer */
-  .foot-links-grid { grid-template-columns: 1fr; }
+  .foot-links-grid { grid-template-columns: 1fr; gap: 24px; }
   .foot-bottom { flex-direction: column; gap: 12px; text-align: center; }
 
-  /* Chat widget */
-  .chat-widget { right: 12px; bottom: 12px; gap: 10px; }
+  /* Chat Widget */
+  .chat-widget {
+    right: 12px;
+    bottom: max(12px, env(safe-area-inset-bottom, 0));
+    gap: 8px;
+  }
   .chat-launcher { width: 52px; height: 52px; }
   .chat-panel {
     width: calc(100vw - 24px);
-    right: 12px;
-    max-height: min(72vh, calc(100vh - 100px));
+    right: 0;
+    max-height: min(74dvh, calc(100dvh - 80px));
   }
 
-  /* Eyebrow */
-  .eyebrow { font-size: 11px; }
+  /* Direction cards */
+  .dir-media, .dir-card-wide .dir-media { aspect-ratio: 16 / 11 !important; }
+  .dir-body { padding: 18px 16px 20px !important; }
+  .dir-head { margin-bottom: 2px; }
+  .dir-icon { width: 40px; height: 40px; }
+  .dir-icon svg { width: 20px; height: 20px; }
 
-  /* Section head */
-  .head-text h2 { font-size: clamp(18px, 6vw, 26px); }
+  /* Eyebrow & Heads */
+  .eyebrow { font-size: 11px; }
+  .head-text h2 { font-size: clamp(18px, 5.5vw, 24px); }
 }
 
-/* ---- Very small phone 360px ---- */
+/* ---- Ultra Small Mobile (<= 360px) ---- */
 @media (max-width: 360px) {
   :root { --gutter: 12px; }
-  .header-inner { gap: 8px; }
-  .lang-switch { display: none; }
-  .btn { padding: 12px 18px; font-size: 13px; }
-  .stat { padding: 18px 12px; }
+  .header-inner { padding-inline: 8px; gap: 6px; }
+  .logo-mark img { height: 22px; }
+  .lang-switch {
+    display: inline-flex !important;
+    padding: 3px 6px !important;
+    font-size: 10px !important;
+    gap: 2px !important;
+  }
+  .lang-option { padding: 1px 4px !important; }
+  .btn { padding: 11px 16px; font-size: 13px; }
+  .stat { padding: 14px 8px; }
+  .stat-value { font-size: 22px; }
   .nav-toggle { width: 36px; height: 36px; }
+  .chat-launcher { width: 48px; height: 48px; }
 }
