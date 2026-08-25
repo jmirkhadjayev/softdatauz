@@ -35,8 +35,8 @@
   <circle cx="560" cy="48" r="3.5" fill="#34E0A1">
     <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
   </circle>
-  <text x="572" y="52" font-family="JetBrains Mono, Consolas, monospace" font-size="10" font-weight="500" fill="#8EA3BF">AI ANALITIKA: <tspan fill="#34E0A1" font-weight="700">FAOL</tspan></text>
-  <text x="696" y="52" font-family="JetBrains Mono, Consolas, monospace" font-size="10" font-weight="500" fill="#60738D">24/7 ONLAYN</text>
+  <text x="572" y="52" font-family="JetBrains Mono, Consolas, monospace" font-size="10" font-weight="600" fill="#34E0A1">AI ANALITIKA: FAOL</text>
+  <text x="704" y="52" font-family="JetBrains Mono, Consolas, monospace" font-size="10" font-weight="500" fill="#60738D">24/7 ONLAYN</text>
 </g>
 
 <!-- ==================== ROW 1 ==================== -->
@@ -64,13 +64,13 @@
     <rect x="0" y="0" width="52" height="66" rx="4" fill="none" stroke="#34E0A1" stroke-width="1.4"/>
     <path d="M0 8 V0 H8 M44 0 H52 V8 M52 58 V66 H44 M8 66 H0 V58" stroke="#34E0A1" stroke-width="2" fill="none"/>
     <rect x="0" y="-12" width="52" height="11" rx="2" fill="#34E0A1"/>
-    <text x="26" y="-3.5" font-family="JetBrains Mono, Consolas, monospace" font-size="7.5" font-weight="700" fill="#060A11" text-anchor="middle">YUZ TANISH</text>
+    <text x="26" y="-3.5" font-family="JetBrains Mono, Consolas, monospace" font-size="7" font-weight="700" fill="#060A11" text-anchor="middle">YUZ TANISH</text>
     <circle cx="26" cy="22" r="10" fill="#1A2738" stroke="#34E0A1" stroke-width="1"/>
     <path d="M12 56 Q26 36 40 56" fill="#1A2738" stroke="#34E0A1" stroke-width="1"/>
   </g>
 
   <!-- Status Tag on screen -->
-  <rect x="10" y="126" width="128" height="18" rx="3" fill="#0C1420" fill-opacity="0.9" stroke="#1F2D42"/>
+  <rect x="10" y="126" width="138" height="18" rx="3" fill="#0C1420" fill-opacity="0.9" stroke="#1F2D42"/>
   <circle cx="18" cy="135" r="2.5" fill="#34E0A1"/>
   <text x="26" y="138.5" font-family="JetBrains Mono, Consolas, monospace" font-size="8" font-weight="500" fill="#34E0A1">KIRISH: RUXSAT ETILDI</text>
 
@@ -106,7 +106,6 @@
     <path d="M80 60 V52 H88 M130 52 H138 V60 M138 108 V116 H130 M88 116 H80 V108" stroke="#22D9FF" stroke-width="2" fill="none"/>
     <rect x="80" y="40" width="68" height="11" rx="2" fill="#22D9FF"/>
     <text x="83" y="48.5" font-family="JetBrains Mono, Consolas, monospace" font-size="7" font-weight="700" fill="#060A11">AI: HARAKAT</text>
-    <!-- Object silhouette inside box -->
     <circle cx="109" cy="68" r="8" fill="#16253B"/>
     <rect x="98" y="78" width="22" height="30" rx="4" fill="#16253B"/>
   </g>
@@ -114,7 +113,7 @@
   <!-- Status Tag on screen -->
   <rect x="10" y="126" width="138" height="18" rx="3" fill="#0C1420" fill-opacity="0.9" stroke="#1F2D42"/>
   <circle cx="18" cy="135" r="2.5" fill="#22D9FF"/>
-  <text x="26" y="138.5" font-family="JetBrains Mono, Consolas, monospace" font-size="8" font-weight="500" fill="#22D9FF">PERIMETR XAVFSIZLIGI: OK</text>
+  <text x="26" y="138.5" font-family="JetBrains Mono, Consolas, monospace" font-size="8" font-weight="500" fill="#22D9FF">PERIMETR: XAVFSIZ</text>
 
   <!-- Scan line -->
   <line x1="2" y1="2" x2="222" y2="2" stroke="#22D9FF" stroke-opacity="0.35" stroke-width="1.5">
@@ -287,7 +286,7 @@
       <animate attributeName="opacity" values="1;0.3;1" dur="2.2s" repeatCount="indefinite"/>
     </circle>
     <text x="24" y="13" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="500" fill="#5A718E">Kameralar</text>
-    <text x="24" y="28" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#E2EBF6">64 / 64 <tspan font-size="9.5" font-weight="600" fill="#34E0A1">ONLAYN</tspan></text>
+    <text x="24" y="28" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#E2EBF6">64 / 64 ONLAYN</text>
   </g>
 
   <!-- Divider -->
@@ -299,7 +298,7 @@
       <animate attributeName="opacity" values="1;0.3;1" dur="2.2s" begin="0.35s" repeatCount="indefinite"/>
     </circle>
     <text x="24" y="13" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="500" fill="#5A718E">Arxiv va Server</text>
-    <text x="24" y="28" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#E2EBF6">30 kun <tspan font-size="9.5" font-weight="600" fill="#22D9FF">(RAID-6)</tspan></text>
+    <text x="24" y="28" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#E2EBF6">30 kun (RAID-6)</text>
   </g>
 
   <!-- Divider -->
@@ -311,7 +310,7 @@
       <animate attributeName="opacity" values="1;0.3;1" dur="2.2s" begin="0.7s" repeatCount="indefinite"/>
     </circle>
     <text x="24" y="13" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="500" fill="#5A718E">Kirish nazorati</text>
-    <text x="24" y="28" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#E2EBF6">СКУД <tspan font-size="9.5" font-weight="600" fill="#34E0A1">FAOL · 100%</tspan></text>
+    <text x="24" y="28" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#E2EBF6">СКУД FAOL · 100%</text>
   </g>
 
   <!-- Divider -->
@@ -323,7 +322,7 @@
       <animate attributeName="opacity" values="1;0.3;1" dur="2.2s" begin="1.05s" repeatCount="indefinite"/>
     </circle>
     <text x="24" y="13" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="500" fill="#5A718E">Signalizatsiya</text>
-    <text x="24" y="28" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#E2EBF6">24/7 <tspan font-size="9.5" font-weight="600" fill="#A855F7">QUROLLANGAN</tspan></text>
+    <text x="24" y="28" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#E2EBF6">24/7 QUROLLANGAN</text>
   </g>
 </g>
 

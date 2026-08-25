@@ -40,6 +40,7 @@
     "ruxsat berildi · abonement": { uz: "ruxsat berildi · abonement", ru: "доступ разрешён · абонемент", en: "access granted · season pass" },
     "// SOFTDATA VMS · XAVFSIZLIK MONITORINGI": { uz: "// SOFTDATA VMS · XAVFSIZLIK MONITORINGI", ru: "// SOFTDATA VMS · МОНИТОРИНГ БЕЗОПАСНОСТИ", en: "// SOFTDATA VMS · SECURITY MONITORING" },
     "// videokuzatuv · 24/7": { uz: "// videokuzatuv · 24/7", ru: "// видеонаблюдение · 24/7", en: "// video surveillance · 24/7" },
+    "AI ANALITIKA: FAOL": { uz: "AI ANALITIKA: FAOL", ru: "AI АНАЛИТИКА: АКТИВНО", en: "AI ANALYTICS: ACTIVE" },
     "AI ANALITIKA:": { uz: "AI ANALITIKA:", ru: "AI АНАЛИТИКА:", en: "AI ANALYTICS:" },
     "FAOL": { uz: "FAOL", ru: "АКТИВНО", en: "ACTIVE" },
     "24/7 ONLAYN": { uz: "24/7 ONLAYN", ru: "24/7 ОНЛАЙН", en: "24/7 ONLINE" },
@@ -52,6 +53,7 @@
     "YUZ TANISH": { uz: "YUZ TANISH", ru: "РАСПОЗНАВАНИЕ ЛИЦ", en: "FACE RECOGNITION" },
     "KIRISH: RUXSAT ETILDI": { uz: "KIRISH: RUXSAT ETILDI", ru: "ВХОД: РАЗРЕШЁН", en: "ACCESS: GRANTED" },
     "AI: HARAKAT": { uz: "AI: HARAKAT", ru: "AI: ДВИЖЕНИЕ", en: "AI: MOTION" },
+    "PERIMETR: XAVFSIZ": { uz: "PERIMETR: XAVFSIZ", ru: "ПЕРИМЕТР: БЕЗОПАСНО", en: "PERIMETER: SECURE" },
     "PERIMETR XAVFSIZLIGI: OK": { uz: "PERIMETR XAVFSIZLIGI: OK", ru: "БЕЗОПАСНОСТЬ ПЕРИМЕТРА: OK", en: "PERIMETER SECURITY: OK" },
     "ANPR: TANILDI · RUXSAT": { uz: "ANPR: TANILDI · RUXSAT", ru: "ANPR: РАСПОЗНАН · ДОСТУП", en: "ANPR: RECOGNIZED · ACCESS" },
     "TERMAL DATCHIK": { uz: "TERMAL DATCHIK", ru: "ТЕРМОДАТЧИК", en: "THERMAL SENSOR" },
@@ -62,13 +64,17 @@
     "360° PANORAMA": { uz: "360° PANORAMA", ru: "360° ПАНОРАМА", en: "360° PANORAMA" },
     "TIZIM HOLATI: NORMAL": { uz: "TIZIM HOLATI: NORMAL", ru: "СТАТУС: НОРМА", en: "STATUS: NORMAL" },
     "Kameralar": { uz: "Kameralar", ru: "Камеры", en: "Cameras" },
+    "64 / 64 ONLAYN": { uz: "64 / 64 ONLAYN", ru: "64 / 64 ОНЛАЙН", en: "64 / 64 ONLINE" },
     "ONLAYN": { uz: "ONLAYN", ru: "ОНЛАЙН", en: "ONLINE" },
     "Arxiv va Server": { uz: "Arxiv va Server", ru: "Архив и Сервер", en: "Archive & Server" },
+    "30 kun (RAID-6)": { uz: "30 kun (RAID-6)", ru: "30 дней (RAID-6)", en: "30 days (RAID-6)" },
     "Arxiv": { uz: "Arxiv", ru: "Архив", en: "Archive" },
     "30 kun": { uz: "30 kun", ru: "30 дней", en: "30 days" },
     "Kirish nazorati": { uz: "Kirish nazorati", ru: "Контроль доступа", en: "Access control" },
+    "СКУД FAOL · 100%": { uz: "СКУД FAOL · 100%", ru: "СКУД АКТИВЕН · 100%", en: "ACS ACTIVE · 100%" },
     "faol": { uz: "faol", ru: "активно", en: "active" },
     "Signalizatsiya": { uz: "Signalizatsiya", ru: "Сигнализация", en: "Alarm system" },
+    "24/7 QUROLLANGAN": { uz: "24/7 QUROLLANGAN", ru: "24/7 НА ОХРАНЕ", en: "24/7 ARMED" },
     "QUROLLANGAN": { uz: "QUROLLANGAN", ru: "НА ОХРАНЕ", en: "ARMED" },
     "qurollangan": { uz: "qurollangan", ru: "на охране", en: "armed" },
     "OBYEKT": { uz: "OBYEKT", ru: "ОБЪЕКТ", en: "OBJECT" },
@@ -88,6 +94,9 @@
 
   function updateSvgTexts(lang) {
     document.querySelectorAll("svg text, svg tspan").forEach(function (textEl) {
+      if (textEl.hasAttribute("data-lang") || textEl.querySelector("[data-lang]") || textEl.closest("[data-lang]")) {
+        return;
+      }
       var raw = textEl.getAttribute("data-svg-raw");
       if (!raw) {
         raw = textEl.textContent.trim();
