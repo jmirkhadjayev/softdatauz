@@ -31,18 +31,47 @@
     "turar-joy · domofon": { uz: "turar-joy · domofon", ru: "жилой комплекс · домофония", en: "residential · intercom" },
     "logistika · integratsiya": { uz: "logistika · integratsiya", ru: "логистика · интеграция", en: "logistics · integration" },
     "tibbiyot · monitoring": { uz: "tibbiyot · monitoring", ru: "медицина · мониторинг", en: "healthcare · monitoring" },
+    "// SOFTDATA PARKING · AVTOTURARGOH XARITASI": { uz: "// SOFTDATA PARKING · AVTOTURARGOH XARITASI", ru: "// SOFTDATA PARKING · КАРТА ПАРКОВКИ", en: "// SOFTDATA PARKING · LIVE PARKING MAP" },
     "// parking · real vaqtda": { uz: "// parking · real vaqtda", ru: "// паркинг · реальное время", en: "// parking · real-time" },
     "BO'SH JOYLAR": { uz: "BO'SH JOYLAR", ru: "СВОБОДНО МЕСТ", en: "FREE SPACES" },
+    "BO'SH": { uz: "BO'SH", ru: "СВОБОДНО", en: "FREE" },
+    "ANPR KAMERA": { uz: "ANPR KAMERA", ru: "ANPR КАМЕРА", en: "ANPR CAMERA" },
+    "✓ RUXSAT BERILDI · ABONEMENT": { uz: "✓ RUXSAT BERILDI · ABONEMENT", ru: "✓ ДОСТУП РАЗРЕШЁН · АБОНЕМЕНТ", en: "✓ ACCESS GRANTED · PASS" },
     "ruxsat berildi · abonement": { uz: "ruxsat berildi · abonement", ru: "доступ разрешён · абонемент", en: "access granted · season pass" },
+    "// SOFTDATA VMS · XAVFSIZLIK MONITORINGI": { uz: "// SOFTDATA VMS · XAVFSIZLIK MONITORINGI", ru: "// SOFTDATA VMS · МОНИТОРИНГ БЕЗОПАСНОСТИ", en: "// SOFTDATA VMS · SECURITY MONITORING" },
     "// videokuzatuv · 24/7": { uz: "// videokuzatuv · 24/7", ru: "// видеонаблюдение · 24/7", en: "// video surveillance · 24/7" },
-    "OBYEKT": { uz: "OBYEKT", ru: "ОБЪЕКТ", en: "OBJECT" },
+    "AI ANALITIKA:": { uz: "AI ANALITIKA:", ru: "AI АНАЛИТИКА:", en: "AI ANALYTICS:" },
+    "FAOL": { uz: "FAOL", ru: "АКТИВНО", en: "ACTIVE" },
+    "24/7 ONLAYN": { uz: "24/7 ONLAYN", ru: "24/7 ОНЛАЙН", en: "24/7 ONLINE" },
+    "· ASOSIY KIRISH": { uz: "· ASOSIY KIRISH", ru: "· ГЛАВНЫЙ ВХОД", en: "· MAIN ENTRANCE" },
+    "· SHIMOLIY PERIMETR": { uz: "· SHIMOLIY PERIMETR", ru: "· СЕВЕРНЫЙ ПЕРИМЕТР", en: "· NORTH PERIMETER" },
+    "· AVTOTURARGOH / ANPR": { uz: "· AVTOTURARGOH / ANPR", ru: "· ПАРКИНГ / ANPR", en: "· PARKING / ANPR" },
+    "· ASOSIY OMBOR": { uz: "· ASOSIY OMBOR", ru: "· ГЛАВНЫЙ СКЛАД", en: "· MAIN WAREHOUSE" },
+    "· SERVER XONASI": { uz: "· SERVER XONASI", ru: "· СЕРВЕРНАЯ", en: "· SERVER ROOM" },
+    "· MA'MURIY HUDUD": { uz: "· MA'MURIY HUDUD", ru: "· АДМИНИСТРАЦИЯ", en: "· ADMIN BUILDING" },
+    "YUZ TANISH": { uz: "YUZ TANISH", ru: "РАСПОЗНАВАНИЕ ЛИЦ", en: "FACE RECOGNITION" },
+    "KIRISH: RUXSAT ETILDI": { uz: "KIRISH: RUXSAT ETILDI", ru: "ВХОД: РАЗРЕШЁН", en: "ACCESS: GRANTED" },
+    "AI: HARAKAT": { uz: "AI: HARAKAT", ru: "AI: ДВИЖЕНИЕ", en: "AI: MOTION" },
+    "PERIMETR XAVFSIZLIGI: OK": { uz: "PERIMETR XAVFSIZLIGI: OK", ru: "БЕЗОПАСНОСТЬ ПЕРИМЕТРА: OK", en: "PERIMETER SECURITY: OK" },
+    "ANPR: TANILDI · RUXSAT": { uz: "ANPR: TANILDI · RUXSAT", ru: "ANPR: РАСПОЗНАН · ДОСТУП", en: "ANPR: RECOGNIZED · ACCESS" },
+    "TERMAL DATCHIK": { uz: "TERMAL DATCHIK", ru: "ТЕРМОДАТЧИК", en: "THERMAL SENSOR" },
+    "21.4°C · NORMAL": { uz: "21.4°C · NORMAL", ru: "21.4°C · НОРМА", en: "21.4°C · NORMAL" },
+    "YONG'IN DATCHIKLARI: OK": { uz: "YONG'IN DATCHIKLARI: OK", ru: "ПОЖАРНЫЕ ДАТЧИКИ: OK", en: "FIRE SENSORS: OK" },
+    "HIMOYA: LEVEL-3 (MAX)": { uz: "HIMOYA: LEVEL-3 (MAX)", ru: "ЗАЩИТА: LEVEL-3 (MAX)", en: "SECURITY: LEVEL-3 (MAX)" },
+    "KIRISH HUQUQI: CHEKLANGAN": { uz: "KIRISH HUQUQI: CHEKLANGAN", ru: "ДОСТУП: ОГРАНИЧЕН", en: "ACCESS: RESTRICTED" },
+    "360° PANORAMA": { uz: "360° PANORAMA", ru: "360° ПАНОРАМА", en: "360° PANORAMA" },
+    "TIZIM HOLATI: NORMAL": { uz: "TIZIM HOLATI: NORMAL", ru: "СТАТУС: НОРМА", en: "STATUS: NORMAL" },
     "Kameralar": { uz: "Kameralar", ru: "Камеры", en: "Cameras" },
+    "ONLAYN": { uz: "ONLAYN", ru: "ОНЛАЙН", en: "ONLINE" },
+    "Arxiv va Server": { uz: "Arxiv va Server", ru: "Архив и Сервер", en: "Archive & Server" },
     "Arxiv": { uz: "Arxiv", ru: "Архив", en: "Archive" },
     "30 kun": { uz: "30 kun", ru: "30 дней", en: "30 days" },
     "Kirish nazorati": { uz: "Kirish nazorati", ru: "Контроль доступа", en: "Access control" },
     "faol": { uz: "faol", ru: "активно", en: "active" },
     "Signalizatsiya": { uz: "Signalizatsiya", ru: "Сигнализация", en: "Alarm system" },
+    "QUROLLANGAN": { uz: "QUROLLANGAN", ru: "НА ОХРАНЕ", en: "ARMED" },
     "qurollangan": { uz: "qurollangan", ru: "на охране", en: "armed" },
+    "OBYEKT": { uz: "OBYEKT", ru: "ОБЪЕКТ", en: "OBJECT" },
     "// jarayon avtomatlashtirish": { uz: "// jarayon avtomatlashtirish", ru: "// автоматизация процессов", en: "// process automation" },
     "Sensor": { uz: "Sensor", ru: "Датчик", en: "Sensor" },
     "Kontroller": { uz: "Kontroller", ru: "Контроллер", en: "Controller" },
@@ -71,12 +100,12 @@
   }
 
   function inlineAndTranslateSvgs() {
-    var images = document.querySelectorAll(".dir-media img[src$='.svg'], .service-visual img[src$='.svg'], .case-cover img[src$='.svg']");
+    var images = document.querySelectorAll(".dir-media img, .service-visual img, .case-cover img");
     images.forEach(function (img) {
       var src = img.getAttribute("src");
-      if (!src || img.dataset.inlining === "1") return;
+      if (!src || src.indexOf(".svg") === -1 || img.dataset.inlining === "1") return;
       img.dataset.inlining = "1";
-      fetch(src)
+      fetch(src, { cache: "reload" })
         .then(function (res) { return res.text(); })
         .then(function (svgText) {
           var parser = new DOMParser();
