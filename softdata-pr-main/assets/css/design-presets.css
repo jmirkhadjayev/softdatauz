@@ -1,0 +1,413 @@
+/* ===========================================================
+   SoftData — Design & Typography Presets System (8 Variants)
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Fira+Code:wght@400;500;600&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700;800&family=Onest:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@600;700;800&family=Unbounded:wght@500;600;700;800&display=swap');
+
+/* ===========================================================
+   PRESET 1: "Silicon Valley AI & Modern Tech" (Tavsiya etiladi ⭐)
+   Headings: Plus Jakarta Sans | Body: Inter | Mono: JetBrains Mono
+   =========================================================== */
+html[data-preset="1"] {
+  --font-heading: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+html[data-preset="1"] .site-header .main-nav .nav-link {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+html[data-preset="1"] h1,
+html[data-preset="1"] .hero h1.hero-h1-long {
+  font-size: clamp(34px, 4.3vw, 54px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+html[data-preset="1"] h2 {
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+html[data-preset="1"] h3 {
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+html[data-preset="1"] p,
+html[data-preset="1"] .hero-lede {
+  font-size: 16px;
+  line-height: 1.68;
+}
+
+/* ===========================================================
+   PRESET 2: "Cyber-Future & Deep Space" (Optimallashtirilgan Unbounded)
+   Headings: Unbounded | Body: Onest | Mono: Space Mono
+   =========================================================== */
+html[data-preset="2"] {
+  --font-heading: "Unbounded", "Arial Narrow", sans-serif;
+  --font-body: "Onest", "Inter", sans-serif;
+  --font-mono: "Space Mono", monospace;
+}
+html[data-preset="2"] .site-header .main-nav .nav-link {
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+html[data-preset="2"] h1,
+html[data-preset="2"] .hero h1.hero-h1-long {
+  font-size: clamp(28px, 3.6vw, 45px);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+}
+html[data-preset="2"] h2 {
+  font-size: clamp(23px, 2.8vw, 34px);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+html[data-preset="2"] h3 {
+  font-size: 19px;
+  font-weight: 600;
+}
+html[data-preset="2"] p,
+html[data-preset="2"] .hero-lede {
+  font-size: 15.5px;
+  line-height: 1.72;
+}
+
+/* ===========================================================
+   PRESET 3: "Neo-Grotesque Industrial" (Nemis muhandislik & Siemens)
+   Headings: Space Grotesk | Body: DM Sans | Mono: IBM Plex Mono
+   =========================================================== */
+html[data-preset="3"] {
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+html[data-preset="3"] .site-header .main-nav .nav-link {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+html[data-preset="3"] h1,
+html[data-preset="3"] .hero h1.hero-h1-long {
+  font-size: clamp(34px, 4.2vw, 54px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+html[data-preset="3"] h2 {
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+html[data-preset="3"] h3 {
+  font-size: 21px;
+  font-weight: 600;
+}
+html[data-preset="3"] p,
+html[data-preset="3"] .hero-lede {
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+/* ===========================================================
+   PRESET 4: "Luxury Tech & Cyber Minimal" (Apple / Nothing Style)
+   Headings: Outfit | Body: Outfit | Mono: JetBrains Mono
+   =========================================================== */
+html[data-preset="4"] {
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+html[data-preset="4"] .site-header .main-nav .nav-link {
+  font-size: 15.5px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+html[data-preset="4"] h1,
+html[data-preset="4"] .hero h1.hero-h1-long {
+  font-size: clamp(36px, 4.6vw, 58px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+html[data-preset="4"] h2 {
+  font-size: clamp(28px, 3.4vw, 42px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+html[data-preset="4"] h3 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+html[data-preset="4"] p,
+html[data-preset="4"] .hero-lede {
+  font-size: 16.5px;
+  line-height: 1.68;
+}
+
+/* ===========================================================
+   PRESET 5: "Next-Gen Fintech & AI Intelligence" (Stripe/Vercel)
+   Headings: Sora | Body: Plus Jakarta Sans | Mono: Fira Code
+   =========================================================== */
+html[data-preset="5"] {
+  --font-heading: "Sora", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "Fira Code", monospace;
+}
+html[data-preset="5"] .site-header .main-nav .nav-link {
+  font-size: 14.5px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+html[data-preset="5"] h1,
+html[data-preset="5"] .hero h1.hero-h1-long {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+html[data-preset="5"] h2 {
+  font-size: clamp(25px, 3vw, 38px);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+html[data-preset="5"] h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+html[data-preset="5"] p,
+html[data-preset="5"] .hero-lede {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* ===========================================================
+   PRESET 6: "Bold Editorial Cyber" (Awwwards / Bold Impact)
+   Headings: Syne | Body: Manrope | Mono: JetBrains Mono
+   =========================================================== */
+html[data-preset="6"] {
+  --font-heading: "Syne", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+html[data-preset="6"] .site-header .main-nav .nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+html[data-preset="6"] h1,
+html[data-preset="6"] .hero h1.hero-h1-long {
+  font-size: clamp(36px, 4.8vw, 62px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+html[data-preset="6"] h2 {
+  font-size: clamp(28px, 3.6vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+html[data-preset="6"] h3 {
+  font-size: 22px;
+  font-weight: 700;
+}
+html[data-preset="6"] p,
+html[data-preset="6"] .hero-lede {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* ===========================================================
+   PRESET 7: "Nordic Clean & Humane Tech" (Skandinavcha Sokinlik)
+   Headings: Manrope | Body: Manrope | Mono: JetBrains Mono
+   =========================================================== */
+html[data-preset="7"] {
+  --font-heading: "Manrope", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+html[data-preset="7"] .site-header .main-nav .nav-link {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+html[data-preset="7"] h1,
+html[data-preset="7"] .hero h1.hero-h1-long {
+  font-size: clamp(34px, 4.3vw, 54px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+html[data-preset="7"] h2 {
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+html[data-preset="7"] h3 {
+  font-size: 21px;
+  font-weight: 600;
+}
+html[data-preset="7"] p,
+html[data-preset="7"] .hero-lede {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ===========================================================
+   PRESET 8: "Enterprise Integration & Cloud" (IBM / Microsoft Azure)
+   Headings: Plus Jakarta Sans | Body: Inter | Mono: IBM Plex Mono
+   =========================================================== */
+html[data-preset="8"] {
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+html[data-preset="8"] .site-header .main-nav .nav-link {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+html[data-preset="8"] h1,
+html[data-preset="8"] .hero h1.hero-h1-long {
+  font-size: clamp(34px, 4vw, 50px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+html[data-preset="8"] h2 {
+  font-size: clamp(24px, 2.8vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+html[data-preset="8"] h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+html[data-preset="8"] p,
+html[data-preset="8"] .hero-lede {
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+/* ===========================================================
+   Interactive Floating Switcher Dock (Pastki qulay boshqaruv paneli)
+   =========================================================== */
+.preset-switcher-dock {
+  display: none !important;
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999999;
+  background: rgba(11, 16, 24, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  padding: 6px 10px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(34, 217, 255, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 95vw;
+  overflow-x: auto;
+  user-select: none;
+}
+.dock-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: #8A97AD;
+  padding-inline: 8px 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.dock-label span.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22D9FF;
+  box-shadow: 0 0 8px #22D9FF;
+  animation: dockPulse 1.8s infinite;
+}
+@keyframes dockPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+.dock-btn {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #B4C0D4;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s cubic-bezier(0.22, 0.68, 0, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+.dock-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+.dock-btn.is-active {
+  background: linear-gradient(135deg, rgba(34, 217, 255, 0.22), rgba(108, 124, 255, 0.22));
+  color: #22D9FF;
+  border-color: rgba(34, 217, 255, 0.5);
+  box-shadow: 0 0 12px rgba(34, 217, 255, 0.3);
+}
+.dock-btn .dock-badge {
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.dock-btn.is-active .dock-badge {
+  background: #22D9FF;
+  color: #05070C;
+  font-weight: 700;
+}
+.dock-all-link {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: #A855F7;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+.dock-all-link:hover {
+  background: rgba(168, 85, 247, 0.25);
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .preset-switcher-dock {
+    bottom: 12px;
+    padding: 5px 8px;
+    gap: 4px;
+  }
+  .dock-btn {
+    font-size: 11px;
+    padding: 5px 9px;
+  }
+}

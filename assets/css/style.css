@@ -30,10 +30,10 @@
   --gradient-accent: linear-gradient(100deg, #22D9FF 0%, #6C7CFF 52%, #A855F7 100%);
   --glow-cyan: 0 0 0 1px rgba(34, 217, 255, 0.22), 0 12px 40px -12px rgba(34, 217, 255, 0.45);
 
-  /* ---- Type ---- */
-  --font-heading: "Unbounded", "Arial Narrow", sans-serif;
-  --font-body: "Inter", "Segoe UI", Arial, sans-serif;
-  --font-mono: "JetBrains Mono", "Consolas", monospace;
+  /* ---- Type (Silicon Valley AI) ---- */
+  --font-heading: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 
   /* ---- Scale ---- */
   --container-w: 1220px;
@@ -288,12 +288,15 @@ section.tight { padding-block: clamp(40px, 6vw, 72px); }
   opacity: 0.7;
 }
 .site-header.is-scrolled { background: rgba(5, 7, 12, 0.9); }
+.site-header .container {
+  max-width: 1440px;
+}
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 78px;
-  gap: 24px;
+  gap: clamp(16px, 2vw, 32px);
 }
 .logo-mark {
   display: inline-flex;
@@ -304,24 +307,33 @@ section.tight { padding-block: clamp(40px, 6vw, 72px); }
 }
 .logo-mark img {
   display: block;
-  height: 30px;
+  height: 54px;
   width: auto;
 }
 .logo-mark:hover { opacity: 0.82; }
-/* footer carries the full lockup, tagline included */
-.logo-mark.logo-full img { height: 54px; }
+/* full lockup (header and footer) */
+.logo-mark.logo-full img,
+.site-header .logo-mark img { height: 54px; }
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: clamp(14px, 1.8vw, 28px);
   margin-inline: auto;
+  flex-shrink: 0;
 }
 .nav-link {
   font-size: 14.5px;
   font-weight: 500;
   color: var(--color-text-secondary);
   position: relative;
-  padding-block: 4px;
+  padding-block: 6px;
+  padding-inline: 4px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  flex-shrink: 0;
   transition: color 0.2s ease;
 }
 .nav-link::after {
@@ -353,7 +365,7 @@ body[data-page="contact"] [data-nav="contact"]::after {
   right: 0;
 }
 
-.header-actions { display: flex; align-items: center; gap: 14px; }
+.header-actions { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
 .lang-switch {
   display: inline-flex;
   align-items: center;
@@ -407,7 +419,7 @@ html[data-site-lang="en"] .lang-switch [data-lang-btn="en"] {
 }
 .nav-toggle span { width: 18px; height: 2px; background: var(--color-text); transition: transform 0.25s ease, opacity 0.25s ease; }
 
-@media (max-width: 940px) {
+@media (max-width: 1080px) {
   .main-nav {
     position: fixed;
     top: 78px;
@@ -452,7 +464,7 @@ html[data-site-lang="en"] .lang-switch [data-lang-btn="en"] {
   body.nav-open { overflow: hidden; }
 }
 @media (max-width: 480px) {
-  .logo-mark img { height: 26px; }
+  .logo-mark img,
   .logo-mark.logo-full img { height: 44px; }
   .lang-switch { font-size: 11px; padding: 6px 10px; gap: 4px; }
   .header-inner { height: 64px; gap: 12px; }
@@ -2028,7 +2040,11 @@ html[data-site-lang="en"] .lang-switch [data-lang-btn="en"] {
 .footer-col a, .footer-col span { display: block; font-size: 14.5px; margin-bottom: 12px; color: #B4BFD1; }
 .footer-col a:hover { color: var(--color-accent); }
 /* signature pill, parked in the bottom-right corner of the page.
-   No border of its own — .footer-grid already draws the divider above it. */
+   Vaqtinchalik o'chirib turilgan: created by jmirkhadjayev */
+.footer-credit,
+.credit-sign {
+  display: none !important;
+}
 .footer-credit {
   display: flex;
   justify-content: flex-end;
@@ -2552,7 +2568,7 @@ svg.inlined-svg, .dir-media svg, .service-visual svg, .case-cover svg, .card-med
     font-size: 19px;
     padding: 15px 0;
   }
-  .logo-mark img { height: 25px; }
+  .logo-mark img,
   .logo-mark.logo-full img { height: 38px; }
 
   /* Language Switcher - compact & crisp */
@@ -2625,7 +2641,8 @@ svg.inlined-svg, .dir-media svg, .service-visual svg, .case-cover svg, .card-med
 @media (max-width: 360px) {
   :root { --gutter: 12px; }
   .header-inner { padding-inline: 8px; gap: 6px; }
-  .logo-mark img { height: 22px; }
+  .logo-mark img,
+  .logo-mark.logo-full img { height: 32px; }
   .lang-switch {
     display: inline-flex !important;
     padding: 3px 6px !important;

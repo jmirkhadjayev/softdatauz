@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="uz" data-site-lang="uz" data-preset="1">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SoftData — 8 ta Tipografika va Dizayn Variantlari | Taqqoslash</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/design-presets.css">
+<style>
+  .preview-page {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+  .preview-hero {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto 50px;
+  }
+  .preview-hero h1 {
+    font-size: clamp(32px, 4.5vw, 52px);
+    margin-bottom: 16px;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .preview-hero p {
+    font-size: 17px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+  .variants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 28px;
+    margin-top: 40px;
+  }
+  .variant-card {
+    background: rgba(11, 16, 24, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.22, 0.68, 0, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .variant-card:hover {
+    border-color: rgba(34, 217, 255, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px -10px rgba(34, 217, 255, 0.2);
+  }
+  .variant-card.recommended {
+    border-color: rgba(34, 217, 255, 0.45);
+    background: linear-gradient(180deg, rgba(34, 217, 255, 0.06) 0%, rgba(11, 16, 24, 0.8) 100%);
+  }
+  .variant-badge-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+  .variant-num {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-accent);
+    background: rgba(34, 217, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(34, 217, 255, 0.2);
+  }
+  .variant-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: #34E0A1;
+    background: rgba(52, 224, 161, 0.1);
+    padding: 3px 8px;
+    border-radius: 6px;
+  }
+  .variant-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+  }
+  .variant-desc {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-bottom: 20px;
+    min-height: 42px;
+  }
+  .specimen-box {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 20px;
+  }
+  .specimen-head {
+    font-size: 20px;
+    font-weight: 700;
+    color: #E9EFF8;
+    margin-bottom: 6px;
+    line-height: 1.25;
+  }
+  .specimen-body {
+    font-size: 13.5px;
+    color: #8A97AD;
+    line-height: 1.5;
+  }
+  .specs-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 24px;
+    font-size: 12.5px;
+  }
+  .spec-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 8px 10px;
+    border-radius: 8px;
+  }
+  .spec-k {
+    color: #8A97AD;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    font-family: var(--font-mono);
+  }
+  .spec-v {
+    color: #E9EFF8;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+  .card-actions {
+    display: flex;
+    gap: 10px;
+  }
+  .btn-preview-link {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 16px;
+    background: var(--color-accent);
+    color: #05070C;
+    font-weight: 700;
+    font-size: 13.5px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  .btn-preview-link:hover {
+    box-shadow: 0 0 20px rgba(34, 217, 255, 0.6);
+    transform: translateY(-1px);
+  }
+  .btn-apply-fast {
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #E9EFF8;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .btn-apply-fast:hover {
+    background: rgba(255, 255, 255, 0.14);
+    color: #FFFFFF;
+  }
+  .back-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    margin-bottom: 24px;
+    transition: color 0.2s ease;
+  }
+  .back-nav:hover {
+    color: var(--color-accent);
+  }
+</style>
+</head>
+<body data-page="preview">
+
+<div class="bg-fx" aria-hidden="true">
+  <video class="fx-video" autoplay muted loop playsinline preload="auto" poster="assets/media/hero-poster.jpg">
+    <source src="assets/media/hero-loop.webm" type="video/webm">
+    <source src="assets/media/hero-loop.mp4" type="video/mp4">
+  </video>
+  <div class="fx-aurora"><span></span><span></span><span></span></div>
+  <div class="fx-grid"></div>
+  <div class="fx-veil"></div>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo-mark logo-full" aria-label="SoftData">
+      <img src="assets/media/softdata-logo.png" alt="SoftData - Artificial Intelligence System" width="796" height="168">
+    </a>
+    <a href="index.html" class="btn btn-outline" style="padding: 9px 18px; font-size: 13.5px;">← Bosh sahifaga qaytish</a>
+  </div>
+</header>
+
+<main class="preview-page">
+  <div class="container">
+    <a href="index.html" class="back-nav">← Bosh sahifaga qaytish</a>
+
+    <div class="preview-hero">
+      <div class="eyebrow">Typography & Visual System</div>
+      <h1>SoftData — 8 ta Dizayn va Tipografika Variantlari</h1>
+      <p>Kompaniya nufuzi va xarakteriga eng mos keladigan uslubni tanlang. Har bir variantni alohida URL orqali to'liq jonli ko'rishingiz yoki pastdagi menyudan tez almashtirishingiz mumkin.</p>
+    </div>
+
+    <div class="variants-grid">
+
+      <!-- VARIANT 1 -->
+      <div class="variant-card recommended">
+        <div>
+          <div class="variant-badge-row">
+            <span class="variant-num">01 / TAVSIYA ETILADI</span>
+            <span class="variant-tag">OpenAI & Linear uslubi</span>
+          </div>
+          <div class="variant-title" style="font-family: 'Plus Jakarta Sans', sans-serif;">Silicon Valley AI</div>
+          <div class="variant-desc">Eng zamonaviy AI/SaaS kompaniyalari standarti. Toza, qat'iy va yirik korporativ buyurtmachilar uchun nufuzli.</div>
+          
+          <div class="specimen-box" style="font-family: 'Inter', sans-serif;">
+            <div class="specimen-head" style="font-family: 'Plus Jakarta Sans', sans-serif;">Avtomatlashtirish & Xavfsizlik</div>
+            <div class="specimen-body">Har qanday mavjud resurslarni tizimli avtomatlashtirish yordamida yuqori xavfsizlikka erishiladi.</div>
+          </div>
+
+          <div class="specs-list">
+            <div class="spec-item"><div class="spec-k">Sarlavha</div><div class="spec-v">Plus Jakarta Sans</div></div>
+            <div class="spec-item"><div class="spec-k">Matn</div><div class="spec-v">Inter</div></div>
+            <div class="spec-item"><div class="spec-k">Menyu</div><div class="spec-v">15px · Medium</div></div>
+            <div class="spec-item"><div class="spec-k">H1 O'lcham</div><div class="spec-v">54px · SemiBold</div></div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="variant-1.html" class="btn-preview-link">Alohida URLda ochish →</a>
+          <button type="button" class="btn-apply-fast" onclick="applyAndGo('1')">Qo'llash</button>
+        </div>
+      </div>
+
+      <!-- VARIANT 2 -->
+      <div class="variant-card">
+        <div>
+          <div class="variant-badge-row">
+            <span class="variant-num">02</span>
+            <span class="variant-tag">Futuristik Neon</span>
+          </div>
+          <div class="variant-title" style="font-family: 'Unbounded', sans-serif; font-size: 19px;">Cyber-Future</div>
+          <div class="variant-desc">Unbounded shriftining optimallashgan keng, robototexnika va kiber-texnologiya kayfiyati.</div>
+          
+          <div class="specimen-box" style="font-family: 'Onest', sans-serif;">
+            <div class="specimen-head" style="font-family: 'Unbounded', sans-serif; font-size: 17px;">Avtomatlashtirish & Parking</div>
+            <div class="specimen-body">ANPR kameralar, to'siqlar va 24/7 obyekt monitoringi kompleks boshqaruvi.</div>
+          </div>
+
+          <div class="specs-list">
+            <div class="spec-item"><div class="spec-k">Sarlavha</div><div class="spec-v">Unbounded</div></div>
+            <div class="spec-item"><div class="spec-k">Matn</div><div class="spec-v">Onest / Inter</div></div>
+            <div class="spec-item"><div class="spec-k">Menyu</div><div class="spec-v">13.5px · Space Mono</div></div>
+            <div class="spec-item"><div class="spec-k">H1 O'lcham</div><div class="spec-v">45px · Keng harflar</div></div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="variant-2.html" class="btn-preview-link">Alohida URLda ochish →</a>
+          <button type="button" class="btn-apply-fast" onclick="applyAndGo('2')">Qo'llash</button>
+        </div>
+      </div>
+
+      <!-- VARIANT 3 -->
+      <div class="variant-card">
+        <div>
+          <div class="variant-badge-row">
+            <span class="variant-num">03</span>
+            <span class="variant-tag">Siemens & Bosch ruhi</span>
+          </div>
+          <div class="variant-title" style="font-family: 'Space Grotesk', sans-serif;">Neo-Grotesque</div>
+          <div class="variant-desc">Xavfsizlik tizimlari, SKUD va muhandislik infratuzilmasi uchun ishonchli nemischa aniqlik.</div>
+          
+          <div class="specimen-box" style="font-family: 'DM Sans', sans-serif;">
+            <div class="specimen-head" style="font-family: 'Space Grotesk', sans-serif;">Intellektual Videokuzatuv</div>
+            <div class="specimen-body">CCTV, markazlashgan arxiv va kirish nazorati yagona xavfsizlik arxitekturasida.</div>
+          </div>
+
+          <div class="specs-list">
+            <div class="spec-item"><div class="spec-k">Sarlavha</div><div class="spec-v">Space Grotesk</div></div>
+            <div class="spec-item"><div class="spec-k">Matn</div><div class="spec-v">DM Sans</div></div>
+            <div class="spec-item"><div class="spec-k">Menyu</div><div class="spec-v">15px · IBM Plex Mono</div></div>
+            <div class="spec-item"><div class="spec-k">H1 O'lcham</div><div class="spec-v">54px · Qat'iy Grotesk</div></div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="variant-3.html" class="btn-preview-link">Alohida URLda ochish →</a>
+          <button type="button" class="btn-apply-fast" onclick="applyAndGo('3')">Qo'llash</button>
+        </div>
+      </div>
+
+      <!-- VARIANT 4 -->
+      <div class="variant-card">
+        <div>
+          <div class="variant-badge-row">
+            <span class="variant-num">04</span>
+            <span class="variant-tag">Apple / Nothing Style</span>
+          </div>
+          <div class="variant-title" style="font-family: 'Outfit', sans-serif;">Luxury Tech Minimal</div>
+          <div class="variant-desc">Nihoyatda nafis, qimmatbaho va yumaloqlangan zamonaviy estetika. Premium biznes-markazlar uchun.</div>
+          
+          <div class="specimen-box" style="font-family: 'Outfit', sans-serif;">
+            <div class="specimen-head" style="font-family: 'Outfit', sans-serif;">Yagona Raqamli Tizim</div>
+            <div class="specimen-body">Murakkab texnik tafsilotlarsiz — aniq, samarali va ko'rinadigan natija.</div>
+          </div>
+
+          <div class="specs-list">
+            <div class="spec-item"><div class="spec-k">Sarlavha</div><div class="spec-v">Outfit (Geometric)</div></div>
+            <div class="spec-item"><div class="spec-k">Matn</div><div class="spec-v">Outfit</div></div>
+            <div class="spec-item"><div class="spec-k">Menyu</div><div class="spec-v">15.5px · Nafis</div></div>
+            <div class="spec-item"><div class="spec-k">H1 O'lcham</div><div class="spec-v">58px · Katta va yumshoq</div></div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="variant-4.html" class="btn-preview-link">Alohida URLda ochish →</a>
+          <button type="button" class="btn-apply-fast" onclick="applyAndGo('4')">Qo'llash</button>
+        </div>
+      </div>
+
+      <!-- VARIANT 5 -->
+      <div class="variant-card">
+        <div>
+          <div class="variant-badge-row">
+            <span class="variant-num">05</span>
+            <span class="variant-tag">Stripe & Vercel Data</span>
+          </div>
+          <div class="variant-title" style="font-family: 'Sora', sans-serif;">Fintech & AI Data</div>
+          <div class="variant-desc">Sun'iy intellekt va real-vaqt ma'lumotlar tahlili uchun optimallashtirilgan intellektual ko'rinish.</div>
+          
+          <div class="specimen-box" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+            <div class="specimen-head" style="font-family: 'Sora', sans-serif;">Real Vaqtda Monitoring</div>
+            <div class="specimen-body">Tahlil, harakat va Telegram xabarnomalari bilan integratsiyalashgan platforma.</div>
+          </div>
+
+          <div class="specs-list">
+            <div class="spec-item"><div class="spec-k">Sarlavha</div><div class="spec-v">Sora</div></div>
+            <div class="spec-item"><div class="spec-k">Matn</div><div class="spec-v">Plus Jakarta Sans</div></div>
+            <div class="spec-item"><div class="spec-k">Menyu</div><div class="spec-v">14.5px · Fira Code</div></div>
+            <div class="spec-item"><div class="spec-k">H1 O'lcham</div><div class="spec-v">52px · Aniq geometrik</div></div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="variant-5.html" class="btn-preview-link">Alohida URLda ochish →</a>
+          <button type="button" class="btn-apply-fast" onclick="applyAndGo('5')">Qo'llash</button>
+        </div>
+      </div>
+
+      <!-- VARIANT 6 -->
+      <div class="variant-card">
+        <div>
+          <div class="variant-badge-row">
+            <span class="variant-num">06</span>
+            <span class="variant-tag">Awwwards / Dovyurak</span>
+          </div>
+          <div class="variant-title" style="font-family: 'Syne', sans-serif;">Bold Editorial Cyber</div>
+          <div class="variant-desc">Ko'rgazmali, kuchli marketing xarakteriga ega va xotirada tez muhrlanadigan dovyurak uslub.</div>
+          
+          <div class="specimen-box" style="font-family: 'Manrope', sans-serif;">
+            <div class="specimen-head" style="font-family: 'Syne', sans-serif; font-weight: 800;">YUQORI XAVFSIZLIK</div>
+            <div class="specimen-body">Obyekt 24/7 nazoratda. Barcha jarayonlar avtomatlashtiriladi va boshqariladi.</div>
+          </div>
+
+          <div class="specs-list">
+            <div class="spec-item"><div class="spec-k">Sarlavha</div><div class="spec-v">Syne (Ultra Bold)</div></div>
+            <div class="spec-item"><div class="spec-k">Matn</div><div class="spec-v">Manrope</div></div>
+            <div class="spec-item"><div class="spec-k">Menyu</div><div class="spec-v">14px · Uppercase</div></div>
+            <div class="spec-item"><div class="spec-k">H1 O'lcham</div><div class="spec-v">62px · Juda yirik</div></div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="variant-6.html" class="btn-preview-link">Alohida URLda ochish →</a>
+          <button type="button" class="btn-apply-fast" onclick="applyAndGo('6')">Qo'llash</button>
+        </div>
+      </div>
+
+      <!-- VARIANT 7 -->
+      <div class="variant-card">
+        <div>
+          <div class="variant-badge-row">
+            <span class="variant-num">07</span>
+            <span class="variant-tag">Skandinavcha Sokinlik</span>
+          </div>
+          <div class="variant-title" style="font-family: 'Manrope', sans-serif;">Nordic Clean Tech</div>
+          <div class="variant-desc">Ortiqcha shovqinsiz, toza chiziqlar, uzoq tomosha qilganda ko'zni toliqtirmaydigan qulay o'qiluvchanlik.</div>
+          
+          <div class="specimen-box" style="font-family: 'Manrope', sans-serif;">
+            <div class="specimen-head" style="font-family: 'Manrope', sans-serif;">Yagona Infratuzilma</div>
+            <div class="specimen-body">Uskunalar, dasturiy ta'minot va IT-tizimlarni bitta boshqaruv kompleksiga birlashtiramiz.</div>
+          </div>
+
+          <div class="specs-list">
+            <div class="spec-item"><div class="spec-k">Sarlavha</div><div class="spec-v">Manrope</div></div>
+            <div class="spec-item"><div class="spec-k">Matn</div><div class="spec-v">Manrope</div></div>
+            <div class="spec-item"><div class="spec-k">Menyu</div><div class="spec-v">15px · Bosiq</div></div>
+            <div class="spec-item"><div class="spec-k">H1 O'lcham</div><div class="spec-v">54px · Toza chiziqlar</div></div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="variant-7.html" class="btn-preview-link">Alohida URLda ochish →</a>
+          <button type="button" class="btn-apply-fast" onclick="applyAndGo('7')">Qo'llash</button>
+        </div>
+      </div>
+
+      <!-- VARIANT 8 -->
+      <div class="variant-card">
+        <div>
+          <div class="variant-badge-row">
+            <span class="variant-num">08</span>
+            <span class="variant-tag">IBM & Azure Cloud</span>
+          </div>
+          <div class="variant-title" style="font-family: 'Plus Jakarta Sans', sans-serif;">Enterprise Integration</div>
+          <div class="variant-desc">1C, ERP, yirik zavodlar va shahar infratuzilmasi uchun korporativ qat'iyatli yechim.</div>
+          
+          <div class="specimen-box" style="font-family: 'Inter', sans-serif;">
+            <div class="specimen-head" style="font-family: 'Plus Jakarta Sans', sans-serif;">Tizim Integratsiyasi</div>
+            <div class="specimen-body">Mavjud jihozni almashtirish shart emas — ko'p hollarda API orqali ulanadi.</div>
+          </div>
+
+          <div class="specs-list">
+            <div class="spec-item"><div class="spec-k">Sarlavha</div><div class="spec-v">Plus Jakarta Sans</div></div>
+            <div class="spec-item"><div class="spec-k">Matn</div><div class="spec-v">Inter</div></div>
+            <div class="spec-item"><div class="spec-k">Menyu</div><div class="spec-v">15px · IBM Plex Mono</div></div>
+            <div class="spec-item"><div class="spec-k">H1 O'lcham</div><div class="spec-v">50px · Korporativ</div></div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="variant-8.html" class="btn-preview-link">Alohida URLda ochish →</a>
+          <button type="button" class="btn-apply-fast" onclick="applyAndGo('8')">Qo'llash</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script src="assets/js/design-switcher.js"></script>
+<script>
+  function applyAndGo(id) {
+    localStorage.setItem('softdata_preset', id);
+    window.location.href = 'index.html?preset=' + id;
+  }
+</script>
+</body>
+</html>

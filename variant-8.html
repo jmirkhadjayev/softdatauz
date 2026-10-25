@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="uz" data-site-lang="uz" data-preset="8">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SoftData [Variant 8: Enterprise Cloud (Plus Jakarta Sans + Inter + IBM Plex)] | Toshkent</title>
+<meta name="description" content="SoftData — Toshkentdagi IT kompaniya: jarayon avtomatlashtirish, videokuzatuv va kirish nazorati, avtomatik parking (ANPR) hamda tizim integratsiyasi. Loyihadan servisgacha.">
+<meta name="theme-color" content="#05070C">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/design-presets.css">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/media/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/media/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/media/apple-touch-icon.png">
+<link rel="shortcut icon" href="assets/media/favicon.ico">
+</head>
+<body data-page="home" data-title-uz="SoftData — Avtomatlashtirish, xavfsizlik, parking va integratsiya | Toshkent" data-title-ru="SoftData — Автоматизация, безопасность, паркинг и интеграция | Ташкент" data-title-en="SoftData — automation, security, parking and integration | Tashkent">
+<!-- ===== ANIMATED BACKGROUND (video + aurora + grid + node-network) ===== -->
+<div class="bg-fx" aria-hidden="true">
+  <video class="fx-video" autoplay muted loop playsinline preload="auto" poster="assets/media/hero-poster.jpg">
+    <source src="assets/media/hero-loop.webm" type="video/webm">
+    <source src="assets/media/hero-loop.mp4" type="video/mp4">
+  </video>
+  <div class="fx-aurora"><span></span><span></span><span></span></div>
+  <div class="fx-grid"></div>
+  <canvas class="fx-canvas"></canvas>
+  <div class="fx-scan"></div>
+  <div class="fx-veil"></div>
+</div>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo-mark logo-full" aria-label="SoftData"><img src="assets/media/softdata-logo.png" alt="SoftData - Artificial Intelligence System" width="796" height="168"></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="nav-link" data-nav="home"><span data-lang="uz">Bosh sahifa</span><span data-lang="ru">Главная</span><span data-lang="en">Home</span></a>
+      <a href="biz-haqimizda.html" class="nav-link" data-nav="about"><span data-lang="uz">Biz haqimizda</span><span data-lang="ru">О нас</span><span data-lang="en">About</span></a>
+      <a href="yechimlar.html" class="nav-link" data-nav="solutions"><span data-lang="uz">Yechimlar</span><span data-lang="ru">Решения</span><span data-lang="en">Solutions</span></a>
+      <a href="loyihalar.html" class="nav-link" data-nav="projects"><span data-lang="uz">Loyihalar</span><span data-lang="ru">Проекты</span><span data-lang="en">Projects</span></a>
+      <a href="hamkorlar.html" class="nav-link" data-nav="partners"><span data-lang="uz">Hamkorlar</span><span data-lang="ru">Партнеры</span><span data-lang="en">Partners</span></a>
+      <a href="aloqa.html" class="nav-link" data-nav="contact"><span data-lang="uz">Aloqa</span><span data-lang="ru">Контакты</span><span data-lang="en">Contact</span></a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-switch" id="langSwitch" type="button" aria-label="UZ | RU | EN">
+        <span class="lang-option" data-lang-btn="uz">UZ</span><span class="lang-sep">|</span><span class="lang-option" data-lang-btn="ru">RU</span><span class="lang-sep">|</span><span class="lang-option" data-lang-btn="en">EN</span>
+      </button>
+      <a href="aloqa.html" class="btn btn-accent header-cta"><span data-lang="uz">Mutaxassis bilan bog'lanish</span><span data-lang="ru">Связаться со специалистом</span><span data-lang="en">Talk to a specialist</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menyu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1 class="type-on hero-h1-long"
+            data-accent-uz="yuqori xavfsizlikka erishiladi"
+            data-accent-ru="единую управляемую инфраструктуру"
+            data-accent-en="a manageable, secure infrastructure"><span data-lang="uz">Har qanday mavjud resurslarni tizimli avtomatlashtirish yordamida yuqori xavfsizlikka erishiladi</span><span data-lang="ru">Объединяем оборудование, программное обеспечение и системы объекта в единую инфраструктуру</span><span data-lang="en">We integrate equipment, software and existing IT systems into one manageable infrastructure</span></h1>
+        <p class="hero-lede">
+          <span data-lang="uz">Avtomatlashtirish, xavfsizlik, parking va integratsiya — barcha jarayonlar avtomatik boshqariladi, obyekt esa 24/7 nazorat ostida. Murakkab texnik tafsilotlarsiz — aniq, samarali va ko'rinadigan natija.</span>
+          <span data-lang="ru">Автоматизация, безопасность, паркинг и системная интеграция. Обеспечиваем бесперебойное управление процессами и круглосуточный контроль 24/7 без избыточной технической сложности.</span>
+          <span data-lang="en">Automation, physical security, smart parking, and system integration. We streamline operations and maintain 24/7 facility control without unnecessary complexity.</span>
+        </p>
+        <div class="hero-actions">
+          <button type="button" class="btn btn-accent btn-arrow" data-chat-open><span data-lang="uz">AI yordamchi bilan suhbat</span><span data-lang="ru">Чат с AI-ассистентом</span><span data-lang="en">Chat with AI assistant</span></button>
+          <a href="yechimlar.html" class="btn btn-outline"><span data-lang="uz">Yo'nalishlarni ko'rish</span><span data-lang="ru">Инженерные направления</span><span data-lang="en">Explore solutions</span></a>
+        </div>
+      </div>
+
+      <!-- Hero visual: animated AI / neural-network engine (SVG built in main.js) -->
+      <div class="hero-visual">
+        <span class="glow-ring"></span>
+        <div class="ai-panel">
+          <div class="ai-bar">
+            <span class="ai-pulse"></span>
+            <span class="ai-title">AI<span class="ai-sep">·</span><span data-lang="uz">obyekt monitoringi</span><span data-lang="ru">мониторинг объекта</span><span data-lang="en">site monitoring</span></span>
+            <span class="ai-state"><span data-lang="uz">faol</span><span data-lang="ru">активно</span><span data-lang="en">active</span></span>
+          </div>
+          <div class="ai-stage" data-ai-net></div>
+          <div class="ai-foot">
+            <span><span data-lang="uz">Kamera</span><span data-lang="ru">Камера</span><span data-lang="en">Camera</span></span>
+            <span><span data-lang="uz">Tahlil</span><span data-lang="ru">Анализ</span><span data-lang="en">Analysis</span></span>
+            <span><span data-lang="uz">Harakat</span><span data-lang="ru">Действие</span><span data-lang="en">Action</span></span>
+          </div>
+        </div>
+        <div class="float-chip">
+          <span class="fc-val">24/7</span>
+          <span class="fc-lab"><span data-lang="uz">monitoring · servis</span><span data-lang="ru">мониторинг · сервис</span><span data-lang="en">monitoring · service</span></span>
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <span data-lang="uz">Yo'nalishlar: <strong>Avtomatlashtirish · Xavfsizlik · Parking · Integratsiya</strong></span>
+        <span data-lang="ru">Направления: <strong>Автоматизация · Безопасность · Паркинг · Интеграция</strong></span>
+        <span data-lang="en">Services: <strong>Automation · Security · Parking · Integration</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="chip"><i class="chip-dot"></i><span data-lang="uz">Shlagbaum va to'siqlar</span><span data-lang="ru">Шлагбаумы и барьеры</span><span data-lang="en">Barriers and gates</span></span>
+      <span class="chip"><i class="chip-dot"></i><span data-lang="uz">Raqam tanish (ANPR)</span><span data-lang="ru">Распознавание номеров</span><span data-lang="en">Plate recognition (ANPR)</span></span>
+      <span class="chip"><i class="chip-dot"></i><span data-lang="uz">Videokuzatuv</span><span data-lang="ru">Видеонаблюдение</span><span data-lang="en">Video surveillance</span></span>
+      <span class="chip"><i class="chip-dot"></i><span data-lang="uz">Kirish nazorati</span><span data-lang="ru">Контроль доступа</span><span data-lang="en">Access control</span></span>
+      <span class="chip"><i class="chip-dot"></i><span data-lang="uz">Turniket va eshiklar</span><span data-lang="ru">Турникеты и двери</span><span data-lang="en">Turnstiles and doors</span></span>
+      <span class="chip"><i class="chip-dot"></i><span data-lang="uz">Domofon</span><span data-lang="ru">Домофония</span><span data-lang="en">Intercom</span></span>
+      <span class="chip"><i class="chip-dot"></i><span data-lang="uz">Signalizatsiya</span><span data-lang="ru">Сигнализация</span><span data-lang="en">Alarm systems</span></span>
+      <span class="chip"><i class="chip-dot"></i><span data-lang="uz">Bo'sh joy tablosi</span><span data-lang="ru">Табло свободных мест</span><span data-lang="en">Free-space display</span></span>
+      <span class="chip"><i class="chip-dot"></i><span data-lang="uz">Onlayn to'lov</span><span data-lang="ru">Онлайн-оплата</span><span data-lang="en">Online payment</span></span>
+      <span class="chip"><i class="chip-dot"></i><span data-lang="uz">1C integratsiyasi</span><span data-lang="ru">Интеграция с 1С</span><span data-lang="en">1C integration</span></span>
+      <span class="chip"><i class="chip-dot"></i><span data-lang="uz">Ish vaqti hisobi</span><span data-lang="ru">Учёт рабочего времени</span><span data-lang="en">Time and attendance</span></span>
+      <span class="chip"><i class="chip-dot"></i><span data-lang="uz">Telegram xabarnoma</span><span data-lang="ru">Уведомления в Telegram</span><span data-lang="en">Telegram alerts</span></span>
+      <span class="chip"><i class="chip-dot"></i><span data-lang="uz">Server va arxiv</span><span data-lang="ru">Серверы и архив</span><span data-lang="en">Servers and archive</span></span>
+      <span class="chip"><i class="chip-dot"></i><span data-lang="uz">Texnik servis</span><span data-lang="ru">Техническое обслуживание</span><span data-lang="en">Technical service</span></span>
+    </div>
+  </div>
+
+  <!-- FOUR DIRECTIONS -->
+  <section>
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="head-text">
+          <div class="eyebrow">01 <span data-lang="uz">Yo'nalishlar</span><span data-lang="ru">Направления</span><span data-lang="en">Services</span></div>
+          <h2><span data-lang="uz">To'rtta asosiy muhandislik yo'nalishi</span><span data-lang="ru">Четыре ключевых направления</span><span data-lang="en">Four core engineering services</span></h2>
+          <p><span data-lang="uz">Loyiha ishlab chiqishdan tortib montaj, sozlash va kafolatli servisgacha — barchasi yagona mas'ul jamoa tomonidan amalga oshiriladi.</span><span data-lang="ru">От проекта до монтажа, от настройки до сервиса — всё у нас. Не нужно искать отдельных подрядчиков.</span><span data-lang="en">From design to installation, from setup to service — all in one place. No need to chase separate contractors.</span></p>
+        </div>
+        <a href="yechimlar.html" class="btn btn-outline btn-arrow"><span data-lang="uz">Batafsil</span><span data-lang="ru">Подробнее</span><span data-lang="en">Learn more</span></a>
+      </div>
+
+      <div class="dir-grid" data-reveal>
+
+        <a class="dir-card dir-card-wide" href="yechimlar.html#parking" data-tilt>
+          <span class="dir-border"></span>
+          <span class="dir-media"><img src="assets/media/dir-parking.svg?v=2" alt="Avtomatik parking va raqam tanish tizimi" loading="lazy" width="800" height="500"></span>
+          <div class="dir-body">
+            <div class="dir-head">
+              <span class="dir-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5"/>
+                  <path d="M9.4 17V7.6h3.4a2.9 2.9 0 0 1 0 5.8H9.4"/>
+                </svg>
+              </span>
+              <span class="dir-num">01</span>
+            </div>
+            <h3><span data-lang="uz">Parking</span><span data-lang="ru">Паркинг</span><span data-lang="en">Parking</span><span class="dir-sub" data-lang="uz">Avtomatik parking</span><span class="dir-sub" data-lang="ru">Автоматический паркинг</span><span class="dir-sub" data-lang="en">Automated parking</span></h3>
+            <p><span data-lang="uz">Kirish, chiqish, to'lov va parking maydonini avtomatlashtirish hamda nazorat qilish: ANPR, tezyurar shlagbaumlar, mobil to'lov va bo'sh joylar monitoringi.</span><span data-lang="ru">Автоматизация въезда, выезда, оплаты и контроля парковочного пространства: ANPR-распознавание, скоростные шлагбаумы, онлайн-оплата и мониторинг свободных мест.</span><span data-lang="en">Automated entry, exit, payments, and parking space management: ANPR licence plate recognition, high-speed barriers, mobile payments, and free-space displays.</span></p>
+            <div class="tag-row">
+              <span class="tag">ANPR</span>
+              <span class="tag"><span data-lang="uz">Shlagbaum</span><span data-lang="ru">Шлагбаумы</span><span data-lang="en">Barriers</span></span>
+              <span class="tag"><span data-lang="uz">Onlayn to'lov</span><span data-lang="ru">Онлайн-оплата</span><span data-lang="en">Online payment</span></span>
+              <span class="tag"><span data-lang="uz">Bo'sh joy tablosi</span><span data-lang="ru">Табло мест</span><span data-lang="en">Free-space display</span></span>
+            </div>
+            <span class="card-link"><span data-lang="uz">Batafsil</span><span data-lang="ru">Подробнее</span><span data-lang="en">Learn more</span></span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="yechimlar.html#security" data-tilt>
+          <span class="dir-border"></span>
+          <span class="dir-media"><img src="assets/media/dir-security.svg" alt="Videokuzatuv monitoring markazi" loading="lazy" width="800" height="500"></span>
+          <div class="dir-body">
+            <div class="dir-head">
+              <span class="dir-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2.8 20 6v5.4c0 4.7-3.3 8.9-8 10.2-4.7-1.3-8-5.5-8-10.2V6l8-3.2z"/>
+                  <circle cx="12" cy="11.4" r="2.8"/>
+                </svg>
+              </span>
+              <span class="dir-num">02</span>
+            </div>
+            <h3><span data-lang="uz">Xavfsizlik</span><span data-lang="ru">Безопасность</span><span data-lang="en">Security</span><span class="dir-sub" data-lang="uz">Xavfsizlik tizimlari</span><span class="dir-sub" data-lang="ru">Системы безопасности</span><span class="dir-sub" data-lang="en">Security systems</span></h3>
+            <p><span data-lang="uz">Intellektual videokuzatuv (CCTV/VMS), kirish nazorati (СКУД), domofoniya va perimetr himoyasi. 24/7 uzluksiz nazorat va markazlashgan arxiv.</span><span data-lang="ru">Интеллектуальное видеонаблюдение (CCTV/VMS), контроль доступа (СКУД), домофония и периметральная безопасность. Круглосуточный контроль 24/7 и централизованный архив.</span><span data-lang="en">Intelligent video surveillance (CCTV/VMS), access control (ACS), video intercoms, and perimeter defense. 24/7 situational control with centralized archives.</span></p>
+            <div class="tag-row">
+              <span class="tag">CCTV / VMS</span>
+              <span class="tag">СКУД / ACS</span>
+              <span class="tag"><span data-lang="uz">Perimetr</span><span data-lang="ru">Периметр</span><span data-lang="en">Perimeter</span></span>
+            </div>
+            <span class="card-link"><span data-lang="uz">Batafsil</span><span data-lang="ru">Подробнее</span><span data-lang="en">Learn more</span></span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="yechimlar.html#automation" data-tilt>
+          <span class="dir-border"></span>
+          <span class="dir-media"><img src="assets/media/dir-automation.svg" alt="Jarayon avtomatlashtirish sxemasi" loading="lazy" width="800" height="500"></span>
+          <div class="dir-body">
+            <div class="dir-head">
+              <span class="dir-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.6 1.6M7.2 16.8l-1.6 1.6M18.4 18.4l-1.6-1.6M7.2 7.2 5.6 5.6"/>
+                  <circle cx="12" cy="12" r="4.2"/>
+                </svg>
+              </span>
+              <span class="dir-num">03</span>
+            </div>
+            <h3><span data-lang="uz">Avtomatlashtirish</span><span data-lang="ru">Автоматизация</span><span data-lang="en">Automation</span><span class="dir-sub" data-lang="uz">Operatsion jarayonlar</span><span class="dir-sub" data-lang="ru">Операционные процессы</span><span class="dir-sub" data-lang="en">Operations</span></h3>
+            <p><span data-lang="uz">Operatsion jarayonlar, biometrik ish vaqti hisobi (Face ID / RFID) va hodisalar bo'yicha tezkor xabarnomalar avtomatizatsiyasi.</span><span data-lang="ru">Автоматизация операционных процессов, биометрического учёта рабочего времени (Face ID / RFID) и мгновенных оповещений об инцидентах.</span><span data-lang="en">Automation of operational workflows, biometric time & attendance tracking (Face ID / RFID), and real-time incident notifications.</span></p>
+            <div class="tag-row">
+              <span class="tag">Face ID</span>
+              <span class="tag"><span data-lang="uz">Ish vaqti hisobi</span><span data-lang="ru">Учёт времени</span><span data-lang="en">Time tracking</span></span>
+              <span class="tag">Telegram bot</span>
+            </div>
+            <span class="card-link"><span data-lang="uz">Batafsil</span><span data-lang="ru">Подробнее</span><span data-lang="en">Learn more</span></span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="yechimlar.html#integration" data-tilt>
+          <span class="dir-border"></span>
+          <span class="dir-media"><img src="assets/media/dir-integration.svg" alt="Tizimlar integratsiyasi sxemasi" loading="lazy" width="800" height="500"></span>
+          <div class="dir-body">
+            <div class="dir-head">
+              <span class="dir-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="6" cy="6" r="2.6"/><circle cx="18" cy="6" r="2.6"/><circle cx="12" cy="18" r="2.6"/>
+                  <path d="M8.6 6h6.8M7.3 8.3 10.7 15.7M16.7 8.3 13.3 15.7"/>
+                </svg>
+              </span>
+              <span class="dir-num">04</span>
+            </div>
+            <h3><span data-lang="uz">Integratsiya</span><span data-lang="ru">Интеграция</span><span data-lang="en">Integration</span><span class="dir-sub" data-lang="uz">Tizimlarni birlashtirish</span><span class="dir-sub" data-lang="ru">Объединение систем</span><span class="dir-sub" data-lang="en">Unified infrastructure</span></h3>
+            <p><span data-lang="uz">1C, CRM, to'lov tizimlari va mavjud uskunalarni yagona boshqaruv platformasiga bog'lash. REST API va webhooklar orqali uzluksiz ma'lumot almashinuvi.</span><span data-lang="ru">Интеграция 1С, CRM, платёжных сервисов и существующего оборудования в единую платформу управления. Непрерывный обмен данными через REST API и webhook.</span><span data-lang="en">Seamless integration of 1C ERP, CRM, payment systems, and legacy equipment into a unified management hub via REST APIs and webhooks.</span></p>
+            <div class="tag-row">
+              <span class="tag">1C / ERP</span>
+              <span class="tag">CRM API</span>
+              <span class="tag"><span data-lang="uz">To'lov servislari</span><span data-lang="ru">Платёжные сервисы</span><span data-lang="en">Payment Gateways</span></span>
+            </div>
+            <span class="card-link"><span data-lang="uz">Batafsil</span><span data-lang="ru">Подробнее</span><span data-lang="en">Learn more</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="tight" data-reveal>
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-value">60+</div>
+          <div class="stat-label"><span data-lang="uz">Jihozlangan obyekt</span><span data-lang="ru">Оснащённых объектов</span><span data-lang="en">Sites equipped</span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">5+</div>
+          <div class="stat-label"><span data-lang="uz">Yillik tajriba</span><span data-lang="ru">Лет опыта</span><span data-lang="en">Years of experience</span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">30+</div>
+          <div class="stat-label"><span data-lang="uz">Servisdagi mijoz</span><span data-lang="ru">Клиентов на сервисе</span><span data-lang="en">Clients on service contracts</span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">&lt;48h</div>
+          <div class="stat-label"><span data-lang="uz">Servisga chiqish vaqti</span><span data-lang="ru">Время выезда сервиса</span><span data-lang="en">Service response time</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -> SOLUTION -> RESULT -->
+  <section data-reveal>
+    <div class="container">
+      <div class="section-head">
+        <div class="head-text">
+          <div class="eyebrow">02 <span data-lang="uz">Muammo va Yechim</span><span data-lang="ru">Проблема и Решение</span><span data-lang="en">Problem & Solution</span></div>
+          <h2><span data-lang="uz">Qanday muammolarni hal qilamiz?</span><span data-lang="ru">Какую проблему мы решаем</span><span data-lang="en">What problems do we solve?</span></h2>
+          <p><span data-lang="uz">Shunchaki jihoz o'rnatish emas — biznesingizdagi haqiqiy to'siqlarni aniq va o'lchanadigan natijalar bilan bartaraf etamiz.</span><span data-lang="ru">Не просто монтаж оборудования — мы устраняем реальные узкие места бизнеса с измеримым результатом.</span><span data-lang="en">Not just hardware installation — we eliminate real operational bottlenecks with measurable results.</span></p>
+        </div>
+      </div>
+
+      <div class="prob-grid">
+
+        <!-- 01 Navbatlar -->
+        <article class="prob-card">
+          <div class="prob-head">
+            <span class="prob-num">01</span>
+            <h3 class="prob-title">
+              <span data-lang="uz">Navbatlar va tirbandlik</span>
+              <span data-lang="ru">Очереди и задержки</span>
+              <span data-lang="en">Queues & Delays</span>
+            </h3>
+          </div>
+          <div class="prob-flow">
+            <div class="prob-item prob-item--muammo">
+              <span class="prob-tag"><span data-lang="uz">Muammo</span><span data-lang="ru">Проблема</span><span data-lang="en">Problem</span></span>
+              <p class="prob-text">
+                <span data-lang="uz">Kirish va chiqishda transport oqimi sekinlashadi, tirbandliklar va noroziliklar yuzaga keladi.</span>
+                <span data-lang="ru">На въезде и выезде замедляется поток транспорта, возникают заторы и недовольство.</span>
+                <span data-lang="en">Traffic slows down at entry and exit points, causing congestion and complaints.</span>
+              </p>
+            </div>
+            <div class="prob-item prob-item--yechim">
+              <span class="prob-tag"><span data-lang="uz">Yechim</span><span data-lang="ru">Решение</span><span data-lang="en">Solution</span></span>
+              <p class="prob-text">
+                <span data-lang="uz">ANPR (raqam tanish kameralari) va avtomatik tezyurar shlagbaumlar tizimi.</span>
+                <span data-lang="ru">ANPR (распознавание номеров) и автоматические скоростные шлагбаумы.</span>
+                <span data-lang="en">ANPR (licence plate recognition) and automated high-speed barriers.</span>
+              </p>
+            </div>
+            <div class="prob-item prob-item--natija">
+              <span class="prob-tag"><span data-lang="uz">Natija</span><span data-lang="ru">Результат</span><span data-lang="en">Result</span></span>
+              <p class="prob-text">
+                <span data-lang="uz">Tezroq o'tish, tirbandlik 70% ga kamayishi va operatorga bo'lgan ehtiyojning qisqarishi.</span>
+                <span data-lang="ru">Ускоренный проезд, сокращение очередей на 70% и снижение нагрузки на оператора.</span>
+                <span data-lang="en">Faster throughput, 70% queue reduction, and minimal need for manual operators.</span>
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02 Qo'lda hisobot -->
+        <article class="prob-card">
+          <div class="prob-head">
+            <span class="prob-num">02</span>
+            <h3 class="prob-title">
+              <span data-lang="uz">Qo'lda hisobot va inson omili</span>
+              <span data-lang="ru">Ручная отчётность и ошибки</span>
+              <span data-lang="en">Manual Reporting & Errors</span>
+            </h3>
+          </div>
+          <div class="prob-flow">
+            <div class="prob-item prob-item--muammo">
+              <span class="prob-tag"><span data-lang="uz">Muammo</span><span data-lang="ru">Проблема</span><span data-lang="en">Problem</span></span>
+              <p class="prob-text">
+                <span data-lang="uz">Ma'lumotlar turli tizimlardan qo'lda yig'iladi, vaqt yo'qotiladi va xatolar ko'payadi.</span>
+                <span data-lang="ru">Данные собираются вручную из разных систем, теряется время и возникают ошибки.</span>
+                <span data-lang="en">Data is gathered manually from disparate systems, wasting time and causing errors.</span>
+              </p>
+            </div>
+            <div class="prob-item prob-item--yechim">
+              <span class="prob-tag"><span data-lang="uz">Yechim</span><span data-lang="ru">Решение</span><span data-lang="en">Solution</span></span>
+              <p class="prob-text">
+                <span data-lang="uz">Yagona boshqaruv paneli, 1C integratsiyasi va avtomatik tahliliy hisobotlar.</span>
+                <span data-lang="ru">Единая панель управления, интеграция с 1С и автоматические отчёты.</span>
+                <span data-lang="en">A unified control dashboard, 1C integration, and automated analytics.</span>
+              </p>
+            </div>
+            <div class="prob-item prob-item--natija">
+              <span class="prob-tag"><span data-lang="uz">Natija</span><span data-lang="ru">Результат</span><span data-lang="en">Result</span></span>
+              <p class="prob-text">
+                <span data-lang="uz">Qo'lda ishlash 90% ga kamayadi, vaqt tejaladi va ma'lumotlar 100% shaffof bo'ladi.</span>
+                <span data-lang="ru">Экономия времени, снижение ручного труда на 90% и 100% прозрачность данных.</span>
+                <span data-lang="en">90% reduction in manual effort, significant time saved, and 100% accurate data.</span>
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03 Nazoratning tarqoqligi -->
+        <article class="prob-card">
+          <div class="prob-head">
+            <span class="prob-num">03</span>
+            <h3 class="prob-title">
+              <span data-lang="uz">Nazoratning tarqoqligi</span>
+              <span data-lang="ru">Разрозненный контроль</span>
+              <span data-lang="en">Fragmented Control</span>
+            </h3>
+          </div>
+          <div class="prob-flow">
+            <div class="prob-item prob-item--muammo">
+              <span class="prob-tag"><span data-lang="uz">Muammo</span><span data-lang="ru">Проблема</span><span data-lang="en">Problem</span></span>
+              <p class="prob-text">
+                <span data-lang="uz">Kameralar, kirish nazorati (СКУД) va to'lov tizimlari bir-biridan alohida ishlaydi.</span>
+                <span data-lang="ru">Камеры, СКУД и платёжные системы работают изолированно друг от друга.</span>
+                <span data-lang="en">Surveillance, access control, and payment tools operate in isolation.</span>
+              </p>
+            </div>
+            <div class="prob-item prob-item--yechim">
+              <span class="prob-tag"><span data-lang="uz">Yechim</span><span data-lang="ru">Решение</span><span data-lang="en">Solution</span></span>
+              <p class="prob-text">
+                <span data-lang="uz">Barcha tizimlarni yagona ekotizimga chuqur integratsiya qilish va markaziy monitoring.</span>
+                <span data-lang="ru">Глубокая интеграция всех систем в единую экосистему и центральный мониторинг.</span>
+                <span data-lang="en">End-to-end integration into a unified ecosystem with central monitoring.</span>
+              </p>
+            </div>
+            <div class="prob-item prob-item--natija">
+              <span class="prob-tag"><span data-lang="uz">Natija</span><span data-lang="ru">Результат</span><span data-lang="en">Result</span></span>
+              <p class="prob-text">
+                <span data-lang="uz">Obyekt bo'yicha yagona to'liq ko'rinish va har qanday hodisaga 3x tezroq reaksiya.</span>
+                <span data-lang="ru">Единая картина по всему объекту и ускорение реакции на события в 3 раза.</span>
+                <span data-lang="en">A complete 360° site overview and 3x faster reaction to any operational incident.</span>
+              </p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ECOSYSTEM -->
+  <section class="on-dark">
+    <div class="container">
+      <div class="eco-grid">
+        <div data-reveal>
+          <div class="eyebrow">03 <span data-lang="uz">Ekotizim</span><span data-lang="ru">Экосистема</span><span data-lang="en">Ecosystem</span></div>
+          <h2><span data-lang="uz">Tarqoq qurilmalar emas — yagona boshqaruv tizimi</span><span data-lang="ru">Единая цифровая инфраструктура вместо разрозненных устройств</span><span data-lang="en">Integrated infrastructure instead of isolated point solutions</span></h2>
+          <p class="hero-lede"><span data-lang="uz">Kameralar, to'siqlar va 1C tizimi mustaqil ishlaganda ma'lumotlar tarqoq bo'lib qoladi. Biz barcha infratuzilmani yagona markazga birlashtiramiz: kirish-chiqish oqimi, xavfsizlik va hisobotlar bitta ekranda jamlanadi.</span><span data-lang="ru">Когда шлагбаум, видеонаблюдение и 1С работают изолированно, контроль остаётся ручным. Мы объединяем все системы в единый центр: поток транспорта, посещаемость, платежи и события безопасности доступны на одном экране.</span><span data-lang="en">When barriers, surveillance, and ERP software operate separately, management remains fragmented. We integrate all systems into a centralized hub: access logs, payments, and security alerts in a single interface.</span></p>
+          <ul class="check-list">
+            <li><span data-lang="uz">Barcha obyektlar uchun yagona boshqaruv paneli</span><span data-lang="ru">Централизованная панель мониторинга всех объектов</span><span data-lang="en">Centralized dashboard across all facilities</span></li>
+            <li><span data-lang="uz">Kunlik, oylik va obyektlar kesimidagi avtomatik hisobotlar</span><span data-lang="ru">Автоматическая отчётность: по сменам, дням и филиалам</span><span data-lang="en">Automated reporting: daily, monthly, and per facility</span></li>
+            <li><span data-lang="uz">Telegram orqali tezkor xabarnomalar tizimi</span><span data-lang="ru">Мгновенные оповещения об инцидентах в Telegram</span><span data-lang="en">Instant event alerts via Telegram</span></li>
+            <li><span data-lang="uz">Mavjud infratuzilma va uskunalarni to'liq integratsiya qilish</span><span data-lang="ru">Интеграция с уже установленным на объекте оборудованием</span><span data-lang="en">Full integration with existing on-site hardware</span></li>
+          </ul>
+          <a href="yechimlar.html#integration" class="btn btn-accent btn-arrow"><span data-lang="uz">Integratsiya haqida</span><span data-lang="ru">Об интеграции</span><span data-lang="en">About integration</span></a>
+        </div>
+        <div class="eco-visual" data-reveal>
+          <img src="assets/media/dir-integration.svg" alt="Tizimlarni yagona markazga ulash sxemasi" loading="lazy" width="800" height="500">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS PREVIEW -->
+  <section>
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="head-text">
+          <div class="eyebrow">04 <span data-lang="uz">Loyihalar</span><span data-lang="ru">Проекты</span><span data-lang="en">Projects</span></div>
+          <h2><span data-lang="uz">So'nggi natijalar</span><span data-lang="ru">Последние результаты</span><span data-lang="en">Recent results</span></h2>
+        </div>
+        <a href="loyihalar.html" class="btn btn-outline btn-arrow"><span data-lang="uz">Barcha loyihalar</span><span data-lang="ru">Все проекты</span><span data-lang="en">All projects</span></a>
+      </div>
+      <div class="work-grid" data-reveal>
+        <a class="work-card" href="loyihalar.html">
+          <span class="work-cover"><img src="assets/media/case-1.svg" alt="Savdo markazi parkovkasi" loading="lazy" width="720" height="450"><span class="work-num">01</span></span>
+          <div class="work-body">
+            <h3><span data-lang="uz">Savdo markazi uchun avtomatik parking</span><span data-lang="ru">Автоматический паркинг для торгового центра</span><span data-lang="en">Automated parking for a shopping centre</span></h3>
+            <p><span data-lang="uz">ANPR kameralar, ikkita shlagbaum va bo'sh joy tablosi — kassirsiz ishlaydi.</span><span data-lang="ru">ANPR-камеры, два шлагбаума и табло свободных мест — работает без кассира.</span><span data-lang="en">ANPR cameras, two barriers and a free-space display — it runs without a cashier.</span></p>
+            <div class="work-meta">
+              <span class="tag"><span data-lang="uz">Parking</span><span data-lang="ru">Паркинг</span><span data-lang="en">Parking</span></span>
+              <span class="project-result">-70% <span data-lang="uz">navbat</span><span data-lang="ru">очередей</span><span data-lang="en">queues</span></span>
+            </div>
+          </div>
+        </a>
+        <a class="work-card" href="loyihalar.html">
+          <span class="work-cover"><img src="assets/media/case-2.svg" alt="Ishlab chiqarish obyekti videokuzatuvi" loading="lazy" width="720" height="450"><span class="work-num">02</span></span>
+          <div class="work-body">
+            <h3><span data-lang="uz">Ishlab chiqarish uchun videokuzatuv</span><span data-lang="ru">Видеонаблюдение для производства</span><span data-lang="en">Video surveillance for a factory</span></h3>
+            <p><span data-lang="uz">64 kamera, 30 kunlik arxiv va bitta monitoring markazi.</span><span data-lang="ru">64 камеры, архив на 30 дней и единый центр мониторинга.</span><span data-lang="en">64 cameras, a 30-day archive and a single monitoring centre.</span></p>
+            <div class="work-meta">
+              <span class="tag"><span data-lang="uz">Xavfsizlik</span><span data-lang="ru">Безопасность</span><span data-lang="en">Security</span></span>
+              <span class="project-result">3x <span data-lang="uz">tez aniqlash</span><span data-lang="ru">быстрее реакция</span><span data-lang="en">faster detection</span></span>
+            </div>
+          </div>
+        </a>
+        <a class="work-card" href="loyihalar.html">
+          <span class="work-cover"><img src="assets/media/case-5.svg" alt="Logistika markazi integratsiyasi" loading="lazy" width="720" height="450"><span class="work-num">03</span></span>
+          <div class="work-body">
+            <h3><span data-lang="uz">Logistika markazida 1C integratsiyasi</span><span data-lang="ru">Интеграция с 1С в логистическом центре</span><span data-lang="en">1C integration at a logistics centre</span></h3>
+            <p><span data-lang="uz">Shlagbaum, tarozi va 1C bitta jarayonga ulandi — hujjat o'zi shakllanadi.</span><span data-lang="ru">Шлагбаум, весы и 1С связаны в один процесс — документ формируется сам.</span><span data-lang="en">Barrier, weighbridge and 1C linked into one process — the paperwork is generated automatically.</span></p>
+            <div class="work-meta">
+              <span class="tag"><span data-lang="uz">Integratsiya</span><span data-lang="ru">Интеграция</span><span data-lang="en">Integration</span></span>
+              <span class="project-result">-85% <span data-lang="uz">qo'lda kiritish</span><span data-lang="ru">ручного ввода</span><span data-lang="en">manual data entry</span></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section>
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="head-text">
+          <div class="eyebrow">05 <span data-lang="uz">Jarayon</span><span data-lang="ru">Процесс</span><span data-lang="en">Process</span></div>
+          <h2><span data-lang="uz">Qanday ishlaymiz</span><span data-lang="ru">Как мы работаем</span><span data-lang="en">How we work</span></h2>
+        </div>
+      </div>
+      <div class="steps" data-reveal>
+        <div class="step">
+          <span class="step-num">01</span>
+          <div>
+            <h3><span data-lang="uz">Obyektga chiqish va texnik audit</span><span data-lang="ru">Выезд на объект и аудит</span><span data-lang="en">Site visit and audit</span></h3>
+            <p><span data-lang="uz">Obyektning amaldagi holatini o'rganamiz: kirish nuqtalari, mavjud uskunalar, kabel yo'nalishlari va texnik talablar.</span><span data-lang="ru">Осматриваем объект лично: точки входа, имеющееся оборудование, трассы кабеля и реальные потребности.</span><span data-lang="en">We inspect the site in person: entry points, existing equipment, cable routes and what you actually need.</span></p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <div>
+            <h3><span data-lang="uz">Muhandislik loyihasi va smeta</span><span data-lang="ru">Проект и смета</span><span data-lang="en">Design and quote</span></h3>
+            <p><span data-lang="uz">Uskunalar spetsifikatsiyasi, ulanish sxemalari va qat'iy smeta. Har bir texnik yechim asoslab beriladi — kutilmagan qo'shimcha to'lovlarsiz.</span><span data-lang="ru">Схема, перечень оборудования и точная цена. Объясняем, почему нужно именно это оборудование — без скрытых платежей.</span><span data-lang="en">A layout, an equipment list and a firm price. We explain why each item is needed — with no hidden charges.</span></p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <div>
+            <h3><span data-lang="uz">Yetkazib berish va montaj ishlari</span><span data-lang="ru">Поставка и монтаж</span><span data-lang="en">Delivery and installation</span></h3>
+            <p><span data-lang="uz">Sertifikatlangan uskunalarni keltiramiz va montaj qilamiz. Ishlar obyektning ish tartibini buzmagan holda, tasdiqlangan grafik asosida boradi.</span><span data-lang="ru">Привозим оборудование и монтируем сами. Работы идут по согласованному графику, не останавливая объект.</span><span data-lang="en">We bring the equipment and install it ourselves. Work follows an agreed schedule without shutting your site down.</span></p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">04</span>
+          <div>
+            <h3><span data-lang="uz">Sozlash, sinovdan o'tkazish va o'qitish</span><span data-lang="ru">Настройка, тест и обучение</span><span data-lang="en">Setup, testing and training</span></h3>
+            <p><span data-lang="uz">Tizimning barcha ishchi stsenariylarini tekshiramiz hamda xodimlaringizga undan to'g'ri foydalanishni o'rgatamiz.</span><span data-lang="ru">Проверяем все сценарии и обучаем ваших сотрудников работе с системой.</span><span data-lang="en">We test every scenario and train your staff to use the system.</span></p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">05</span>
+          <div>
+            <h3><span data-lang="uz">Servis va qo'llab-quvvatlash</span><span data-lang="ru">Сервис и поддержка</span><span data-lang="en">Service and support</span></h3>
+            <p><span data-lang="uz">Kafolat, rejali texnik ko'rik va chaqiruv bo'yicha chiqish — tizim ishdan chiqib qolmaydi.</span><span data-lang="ru">Гарантия, плановое обслуживание и выезд по вызову — система не остаётся без присмотра.</span><span data-lang="en">Warranty, scheduled maintenance and call-out visits — the system is never left unattended.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="on-dark cta-band" data-reveal>
+    <div class="container">
+      <div class="eyebrow"><span data-lang="uz">Hamkorlik</span><span data-lang="ru">Сотрудничество</span><span data-lang="en">Next Step</span></div>
+      <h2><span data-lang="uz">Loyihangizni birgalikda muhokama qilamiz</span><span data-lang="ru">Обсудим задачи вашего проекта</span><span data-lang="en">Let's discuss your project requirements</span></h2>
+      <p class="hero-lede"><span data-lang="uz">Mutaxassisimiz obyekt talablarini o'rganib, aniq texnik yechim va smetani taqdim etadi.</span><span data-lang="ru">Наш инженер проведёт аудит объекта, подберёт спецификацию оборудования и подготовит точную смету.</span><span data-lang="en">Our engineering team will assess your site requirements and prepare a detailed specification and quote.</span></p>
+      <div class="hero-actions">
+        <a href="aloqa.html" class="btn btn-accent btn-arrow"><span data-lang="uz">Loyihani muhokama qilish</span><span data-lang="ru">Обсудить проект</span><span data-lang="en">Discuss a project</span></a>
+        <a href="tel:+998507979779" class="btn btn-outline">+998 50 797-97-79</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo-mark logo-full" aria-label="SoftData"><img src="assets/media/softdata-logo.png" alt="SoftData - Artificial Intelligence System" width="796" height="168"></a>
+      <p><span data-lang="uz">Obyektning yagona raqamli infratuzilmasi: uskunalar, dasturiy ta'minot va IT-tizimlarni bitta boshqaruv kompleksiga birlashtiramiz.</span><span data-lang="ru">Единая цифровая инфраструктура объекта: объединяем оборудование, ПО и IT-системы в управляемый комплекс.</span><span data-lang="en">Unified facility digital infrastructure: integrating equipment, software, and IT systems into a manageable complex.</span></p>
+    </div>
+    <div class="footer-col">
+      <span class="footer-title"><span data-lang="uz">Sahifalar</span><span data-lang="ru">Страницы</span><span data-lang="en">Pages</span></span>
+      <a href="biz-haqimizda.html"><span data-lang="uz">Biz haqimizda</span><span data-lang="ru">О нас</span><span data-lang="en">About</span></a>
+      <a href="yechimlar.html"><span data-lang="uz">Yechimlar</span><span data-lang="ru">Решения</span><span data-lang="en">Solutions</span></a>
+      <a href="loyihalar.html"><span data-lang="uz">Loyihalar</span><span data-lang="ru">Проекты</span><span data-lang="en">Projects</span></a>
+      <a href="hamkorlar.html"><span data-lang="uz">Hamkorlar</span><span data-lang="ru">Партнеры</span><span data-lang="en">Partners</span></a>
+    </div>
+    <div class="footer-col">
+      <span class="footer-title"><span data-lang="uz">Yo'nalishlar</span><span data-lang="ru">Направления</span><span data-lang="en">Services</span></span>
+      <a href="yechimlar.html#automation"><span data-lang="uz">Avtomatlashtirish</span><span data-lang="ru">Автоматизация</span><span data-lang="en">Automation</span></a>
+      <a href="yechimlar.html#security"><span data-lang="uz">Xavfsizlik</span><span data-lang="ru">Безопасность</span><span data-lang="en">Security</span></a>
+      <a href="yechimlar.html#parking"><span data-lang="uz">Parking</span><span data-lang="ru">Паркинг</span><span data-lang="en">Parking</span></a>
+      <a href="yechimlar.html#integration"><span data-lang="uz">Integratsiya</span><span data-lang="ru">Интеграция</span><span data-lang="en">Integration</span></a>
+    </div>
+    <div class="footer-col">
+      <span class="footer-title"><span data-lang="uz">Aloqa</span><span data-lang="ru">Контакты</span><span data-lang="en">Contact</span></span>
+      <a href="tel:+998507979779">+998 50 797-97-79</a>
+      <a href="mailto:info@softdata.uz">info@softdata.uz</a>
+      <span><span data-lang="uz">Toshkent, Yunusobod t., Bog'ishamol ko'chasi 235A</span><span data-lang="ru">Ташкент, Юнусабадский р-н, ул. Богишамол 235A</span><span data-lang="en">Tashkent, Yunusabad dist., Bogishamol st. 235A</span></span>
+    </div>
+  </div>
+  <div class="container footer-credit">
+    <a class="credit-sign" href="http://mirkhadjayev.uz/" target="_blank" rel="noopener noreferrer" aria-label="created by jmirkhadjayev - mirkhadjayev.uz">
+      <span class="credit-tag">&lt;/&gt;</span>
+      <span class="credit-label">created by</span>
+      <span class="credit-name">jmirkhadjayev</span>
+      <span class="credit-caret" aria-hidden="true"></span>
+    </a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/chat.js"></script>
+<script src="assets/js/design-switcher.js"></script>
+</body>
+</html>
