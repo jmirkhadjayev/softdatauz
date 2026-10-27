@@ -535,11 +535,14 @@
   /* ---------- Particle / node network canvas ---------- */
   function initParticles() {
     var canvas = document.querySelector(".fx-canvas");
-    if (!canvas || reducedMotion) { if (canvas) canvas.remove(); return; }
+    if (!canvas || reducedMotion || window.innerWidth < 768) {
+      if (canvas) canvas.remove();
+      return;
+    }
     var ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
     var w = 0, h = 0, nodes = [], raf = null;
     var pointer = { x: -9999, y: -9999 };
 
@@ -550,21 +553,21 @@
       canvas.height = Math.floor(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-      // density scales with viewport, capped so phones stay smooth
-      var count = Math.min(84, Math.max(26, Math.round((w * h) / 22000)));
+      // Lightweight density: smooth 60fps even on laptops
+      var count = Math.min(42, Math.max(16, Math.round((w * h) / 36000)));
       nodes = [];
       for (var i = 0; i < count; i++) {
         nodes.push({
           x: Math.random() * w,
           y: Math.random() * h,
-          vx: (Math.random() - 0.5) * 0.24,
-          vy: (Math.random() - 0.5) * 0.24,
-          r: Math.random() * 1.6 + 0.7
+          vx: (Math.random() - 0.5) * 0.22,
+          vy: (Math.random() - 0.5) * 0.22,
+          r: Math.random() * 1.5 + 0.7
         });
       }
     }
 
-    var LINK = 148;      // px — max distance for a connecting line
+    var LINK = 140;
     var LINK2 = LINK * LINK;
 
     function frame() {
@@ -594,7 +597,7 @@
           ctx.stroke();
         }
 
-        // cursor halo — nodes near the pointer light up
+        // cursor halo
         var pdx = a.x - pointer.x, pdy = a.y - pointer.y;
         var pd2 = pdx * pdx + pdy * pdy;
         var near = pd2 < 42000 ? 1 - pd2 / 42000 : 0;
@@ -619,23 +622,43 @@
     var resizeTimer = null;
     window.addEventListener("resize", function () {
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(resize, 180);
-    });
+      resizeTimer = setTimeout(function () {
+        if (window.innerWidth < 768) {
+          stop();
+          if (canvas) canvas.remove();
+        } else {
+          resize();
+        }
+      }, 200);
+    }, { passive: true });
+
     window.addEventListener("pointermove", function (e) {
       pointer.x = e.clientX;
       pointer.y = e.clientY;
-    });
+    }, { passive: true });
+
     window.addEventListener("pointerleave", function () {
       pointer.x = pointer.y = -9999;
-    });
+    }, { passive: true });
+
+    // Pause canvas when user is deep down the page where canvas is obscured
+    var isFar = false;
+    window.addEventListener("scroll", function () {
+      var far = window.scrollY > window.innerHeight * 1.6;
+      if (far !== isFar) {
+        isFar = far;
+        if (isFar) stop(); else start();
+      }
+    }, { passive: true });
+
     document.addEventListener("visibilitychange", function () {
-      if (document.hidden) stop(); else start();
+      if (document.hidden) stop(); else if (!isFar) start();
     });
   }
 
-  /* ---------- Cursor-follow shine on cards ---------- */
+  /* ---------- Cursor-follow shine on cards (desktop only) ---------- */
   function initCardShine() {
-    if (reducedMotion) return;
+    if (reducedMotion || !window.matchMedia("(hover: hover)").matches) return;
     document.querySelectorAll(".card, .work-card, .partner-tile").forEach(function (card) {
       if (!card.querySelector(".card-shine")) {
         var shine = document.createElement("span");
@@ -646,7 +669,7 @@
         var rect = card.getBoundingClientRect();
         card.style.setProperty("--mx", (e.clientX - rect.left) + "px");
         card.style.setProperty("--my", (e.clientY - rect.top) + "px");
-      });
+      }, { passive: true });
     });
   }
 
